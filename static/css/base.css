@@ -1,14 +1,20 @@
 html {
     height: 100%;
 }
-
+#header-container {
+    background-color:#525975;
+}
+.account-icons {
+    height: 1rem;
+    width:1rem;
+}
 .jumbotron {
     background-image:url('/media/churros.jpg');
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
     -moz-background-size: cover;
-    min-height: 60vh;
+    min-height: 55vh;
     margin-top: 0;
 }
 
@@ -18,7 +24,7 @@ html {
     background-color: rgba(255, 255, 255, 0.8);
     align-items:center;
     vertical-align: central;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 .jumbotron_shoutout{
     color:#000;
@@ -39,14 +45,52 @@ html {
     font-size: 20px;
     font-family: 'Playfair Display', serif;
 }
+@media only screen and (max-width: 768px) {
+    .jumbotron {
+    background-image:url("/media/churros.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 45vh;
+    margin-top: 0;
+}
+    .overlay {
+    height:50%;
+    width:80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-items:center;
+    vertical-align: bottom;
+    margin-top: 220px;
+}
+.jumbotron_shoutout{
+    color:#000;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size:25px;
+    margin-bottom:10px;
+    
+}
+#school_intro {
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-weight:400;
+    font-size:15px;
+}
 
+.intro_messages {
+    font-size: 10px;
+    font-family: 'Playfair Display', serif;
+}
+}
 /* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1rem;
+    width: 1rem;
 }
 
 .logo-font {
@@ -57,79 +101,5 @@ html {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #fff !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
 
 

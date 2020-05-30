@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div class="jumbotron jumbotron-courses"> 
+        <div class="overlay mx-auto p-5 text-center">
+            <p class="display-4 jumbotron_shoutout">All Courses</p>
+            <hr class="my-4">
+            <ul class="jumbotron_descriptions">
+            <li><i class="fas fa-check mx-2"></i>Short evenings and weekends courses</li>
+            <li><i class="fas fa-check mx-2"></i> Small group of maximum of 8 students</li>
+            <li><i class="fas fa-check mx-2"></i>Suitable for beginner and intermediate level</li>
+            <li><i class="fas fa-check mx-2"></i> From age 18 to 99. All are welcome to learn.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row text-center mt-2">
+        <div class="col-md-12">
+            <h2>Baking courses</h2>
+        </div>
+    </div>
+    <div class="row my-3">
+        {% if courses %}
+            {% for course in courses %}
+            <div class="col-md-4 mb-3">
+            <div class="card text-center" style="width: 22rem;">
+                <img class="card-img-top" src="{{course.photo_course.url}}"  alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-header">{{course.title}}</h5>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Weekdays <br> {{course.weekday_datetime|date:"d F yy h:i a"}}</li>
+                        <li class="list-group-item">Weekends <br> {{course.weekends_datetime|date:"d F yy h:i a"}}</li>
+                    </ul>
+                <div class="card-body">
+                    <a class="btn btn-info" href="#" role="button">More Info</a>
+                </div>
+            </div>
+        </div>
+            {% endfor %}
+        {% else %}
+        <div class="col-md-12">
+            <h4>There no courses available </h4>
+        </div>
+        {% endif %}
+    </div>
+    
+</div>
+{% endblock %}

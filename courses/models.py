@@ -12,7 +12,7 @@ class Course(models.Model):
     completion_list2 = models.CharField(max_length=250, blank=True)
     weekday_datetime = models.DateTimeField()
     weekends_datetime = models.DateTimeField()
-    photo_course = models.ImageField(upload_to='photos/%Y/%m/%d/')
+    photo_course = models.ImageField(upload_to='media/photos/%Y/%m/%d/')
     is_next_event = models.BooleanField(default=False)
     is_published = models.BooleanField(default=True)
     price = models.IntegerField()

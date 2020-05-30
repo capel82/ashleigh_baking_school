@@ -168,3 +168,87 @@ div .card {
     font-size: 25px;
     padding:0;
 }
+
+/*--Courses.html--*/
+.jumbotron-courses {
+    background-image:url("/media/baking.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 65vh;
+    margin-top: 0;
+}
+.jumbotron_descriptions {
+    list-style: none;
+    font-size:20px;
+    font-family: 'san serif', serif;
+    font-style:italic;
+    line-height: 1.5em;
+    padding:0;
+}
+@media only screen and (max-width: 600px) {
+  .overlay {
+    height:45%;
+    width:90%; 
+    padding:10px;
+}
+    .jumbotron_shoutout{
+    font-size:20px;
+    
+}
+    .jumbotron_descriptions {
+    font-size:10px;  
+}
+
+}
+@media only screen and (max-width: 768px) {
+  .overlay {
+    height:45%;
+    width:85%; 
+}
+    .jumbotron_shoutout{
+    font-size:40px;
+    
+}
+    .jumbotron_descriptions {
+    font-size:20px;  
+}
+}
+
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4f4f4f;
+}
+div .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.index-card {
+    margin-top:20px;
+    font-family: 'Playfair Display', serif;
+}
+.cardbody1 {
+    background-color: #BB5978;
+    opacity: 0.8;
+}
+.cardbody2 {
+    background-color:#91ACC0;
+    opacity:0.8;
+}
+.cardbody3 {
+    background-color: #8C6A6B;
+    opacity:0.8;
+}
+.card-link {
+    font-size: 30px;
+    color: #000;
+}
+.index-card a:hover {
+    color:#fff;
+}
+
+.list-group-item {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}

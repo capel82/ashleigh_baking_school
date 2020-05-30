@@ -27,7 +27,7 @@ html {
 }
 /*--jumbotron index.html--*/
 .jumbotron {
-    background-image:url('/media/churros.jpg');
+    background-image:url('/static/photos/churros.jpg');
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -65,7 +65,7 @@ html {
 }
 @media only screen and (max-width: 768px) {
     .jumbotron {
-    background-image:url("/media/churros.jpg");
+    background-image:url("/static/photos/churros.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -171,7 +171,7 @@ div .card {
 
 /*--Courses.html--*/
 .jumbotron-courses {
-    background-image:url("/media/baking.jpg");
+    background-image:url("/static/photos/baking.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;

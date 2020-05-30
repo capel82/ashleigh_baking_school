@@ -1,0 +1,135 @@
+html {
+    height: 100%;
+}
+
+.jumbotron {
+    background-image:url('/media/main.jpg');
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 60vh;
+    margin-top: 0;
+}
+
+.overlay {
+    height:70%;
+    width:60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-items:center;
+    vertical-align: central;
+    margin-top: 70px;
+}
+.jumbotron_shoutout{
+    color:#000;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    font-size:60px;
+    font-style:italic;
+
+}
+#school_intro {
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-weight:400;
+    font-size:25px;
+}
+
+.intro_messages {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #fff !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+

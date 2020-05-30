@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
-<h1 class='text-success'> Hello World it works!</h1>
+<main role="main" class="flex-shrink-0">
+<div class="container-fluid p-0">
+    <div class="jumbotron"> 
+        <div class="overlay mx-auto p-4 text-center">
+            <p class="jumbotron_shoutout">Welcome</p>
+            <hr class="my-4">
+            <p id="school_intro">Do you want to learn a new skill or upskill?</p>
+            <p class="intro_messages">We have short baking courses that run weekdays and weekends to suit your busy life.</p> 
+            <p class="intro_messages font-italic font-weight-bold">It is never too late to learn and get started!</p>
+        </div>
+    </div>
+</div>
+<div id="news" class="container-fluid bg-light">
+    <div class=" col-md-12 text-center">
+        <h2 class="pt-4">Next Baking Course </h2>
+        <h4 class="pb-4">24 June 2020 Beginner Wednesday 7.00pm-9.30pm </h4>
+    </div>
+</div>
 {% endblock %}

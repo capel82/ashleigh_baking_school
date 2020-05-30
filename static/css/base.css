@@ -1,6 +1,7 @@
 html {
     height: 100%;
 }
+/*--header and navbar--*/
 #header-container {
     background-color:#525975;
 }
@@ -8,6 +9,23 @@ html {
     height: 1rem;
     width:1rem;
 }
+/* from Bulma for icons in header and navabr--*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1rem;
+    width: 1rem;
+}
+
+.logo-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+/*--jumbotron index.html--*/
 .jumbotron {
     background-image:url('/media/churros.jpg');
     background-position:center;
@@ -84,22 +102,69 @@ html {
     font-family: 'Playfair Display', serif;
 }
 }
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1rem;
-    width: 1rem;
-}
-
-.logo-font {
+/*--browse courses/giftvouchers cards--*/
+#browse {
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:20px;
     font-family: 'Playfair Display', serif;
 }
-
-.main-logo-link {
-    width: fit-content;
+#browse p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color:#4f4f4f;
+}
+h2 {
+    color: #4f4f4f;
+    font-family: 'Playfair Display', serif;
+}
+.index-card {
+    margin-top:20px;
+    font-family: 'Playfair Display', serif;
+}
+.img-index{
+    height: 350px;
+}
+div .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cardbody1 {
+    background-color: #BB5978;
+    opacity:0.8;
 }
 
+.cardbody2 {
+    background-color:#91ACC0;
+    opacity:0.8;
+}
+.card-link {
+    font-size: 30px;
+    color: #000;
+}
+.index-card a:hover {
+    color:#fff;
+}
+/*--students feebback--*/
+.comments {
+    font-family: 'Playfair Display', serif;
+}
+.ratings {
+    padding:0;
+    color: #ffd633;
+}
+/*--footer--*/
+#footer-details {
+    background-color: #91ACC0;
+}
 
+.footer-icons p, {
+    color:#fff;
+}
 
+.social_titles {
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 25px;
+    padding:0;
+}

@@ -29,7 +29,7 @@
             {% for course in courses %}
             <div class="col-md-4 mb-3">
             <div class="card text-center" style="width: 22rem;">
-                <img class="card-img-top" src="{{course.photo_course.url}}"  alt="Card image cap">
+                <img class="card-img-top" src="{{ course.photo_course.url }}"  alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-header">{{course.title}}</h5>
                 </div>
@@ -38,7 +38,7 @@
                         <li class="list-group-item">Weekends <br> {{course.weekends_datetime|date:"d F yy h:i a"}}</li>
                     </ul>
                 <div class="card-body">
-                    <a class="btn btn-info" href="#" role="button">More Info</a>
+                    <a class="btn btn-info" href="{% url 'course' course.id %}" role="button">More Info</a>
                 </div>
             </div>
         </div>

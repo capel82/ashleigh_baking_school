@@ -252,3 +252,59 @@ div .card {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
+/*--single course.html --*/
+.single_title {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+.filter_checkbox {
+    font-size:26px;
+    font-family: 'san serif', serif;
+}
+h1,h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4f4f4f;
+}
+h4 {
+    font-family: 'Playfair Display', serif;
+}
+.course_title {
+    background-color:#525975;
+    color:#fff;
+}
+.img-courses{
+    width:350px;
+    height:380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.courses_lists {
+    list-style: none;
+    padding:0;
+    margin:15px;
+    font-family: 'san serif', serif;
+    font-size:16px;
+}
+.courses_dates {
+    font-family: 'san serif', serif;
+    font-size:18px;
+}
+
+.weekdays {
+    color:#525975;
+    padding:5px;
+    border: solid 2px;
+    margin: 0 50px;
+    border-color:#525975;
+
+}
+.weekends{
+    color:#8C6A6B;
+    padding: 5px;
+    border: solid 2px;
+    margin: 0 50px;
+    border-color:#8C6A6B;
+}
+.add_basket {
+    background-color:#BB5978;
+}

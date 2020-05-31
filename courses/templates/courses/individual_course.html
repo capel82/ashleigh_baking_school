@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container p-5">
+    <div class="row p-5 my-5 courses_rows">
+        <div class="col-md-4 d-flex justify-content-center">
+            <img class="img-courses img-fluid" alt="Responsive image" src= "{{ course.photo_course.url }}">
+        </div>
+        <div class="col-md-8">
+            <div class="row course_title">
+                <div class="col-md-12 d-flex justify-content-center">
+                <p class=" pt-2 single_title">{{course.title}}</p>
+                </div>
+            </div>
+
+            <div class="row courses_descriptions">
+                <div class=" col-sm-6 col-md-4 col-lg-6">
+                    <ul class="courses_lists">
+                        <h5>What you will learn:</h5>
+                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list1}}</li>
+                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list2}}</li>
+                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list3}}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6">
+                    <ul class="courses_lists">
+                        <h5>What you will bring back:</h5>
+                        <li><i class="fas fa-check mx-2"></i>{{course.completion_list1}}.</li>
+                        <li><i class="fas fa-check mx-2"></i>{{course.completion_list2}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row courses_dates">
+            <div class="col-sm-4 col-md-6 weekdays_column">
+            <div class="row d-block text-center">
+                <h5 class="weekdays mb-3">Weekdays</h5>
+                <p><strong>{{course.weekday_datetime|date:"d F yy h:i a"}}</strong></p>
+                <p><strong>Euro {{course.price}}</strong></p>
+            </div>
+            <div class="row d-flex justify-content-center mb-2">
+                <a class="btn btn-light add_basket">Add to Basket</a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-6  weekends_column">
+            <div class="row d-block text-center">
+                <h5 class="weekends mb-3">Weekends</h5>
+                <p><strong>{{course.weekends_datetime|date:"d F yy h:i a"}}</strong></p>
+                <p><strong>Euro {{course.price}}</strong></p>
+                </div>
+            <div class="row d-flex justify-content-center">
+                <a class="btn btn-light add_basket">Add to Basket</a>
+            </div>
+        </div>
+            </div>
+        </div><!--col-md-8 div-->
+    </div><!--2nd row div-->
+</div><!--container div-->
+
+{% endblock %}

@@ -4,7 +4,7 @@ from .models import Course, Category
 # Register your models here.
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category','weekday_datetime','weekends_datetime', 'is_published', 'is_next_event')
+    list_display = ('id', 'title', 'category','day','weekends_datetime', 'is_published', 'is_next_event')
 
     ordering = ('weekday_datetime',)
 

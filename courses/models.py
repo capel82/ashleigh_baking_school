@@ -10,6 +10,7 @@ class Course(models.Model):
     learn_list3 = models.CharField(max_length=250, blank=True)
     completion_list1 = models.CharField(max_length=250)
     completion_list2 = models.CharField(max_length=250, blank=True)
+    day = models.CharField(max_length=20, blank=True)
     weekday_datetime = models.DateTimeField()
     weekends_datetime = models.DateTimeField()
     photo_course = models.ImageField(upload_to='media/photos/')

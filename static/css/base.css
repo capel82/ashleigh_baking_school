@@ -253,29 +253,31 @@ div .card {
     font-family: 'Playfair Display', serif;
 }
 /*--single course.html --*/
+.course_container {
+    margin-top:100px;
+}
 .single_title {
     color: #fff;
     font-family: 'Playfair Display', serif;
     font-size: 25px;
+    margin:0;
+    padding:5px;
 }
-.filter_checkbox {
-    font-size:26px;
-    font-family: 'san serif', serif;
-}
+
 h1,h2 {
     font-family: 'Playfair Display', serif;
     color: #4f4f4f;
 }
-h4 {
+h4,h5 {
     font-family: 'Playfair Display', serif;
 }
 .course_title {
-    background-color:#525975;
+    background-color:#91ACC0;
     color:#fff;
 }
 .img-courses{
-    width:350px;
-    height:380px;
+    width:450px;
+    height:450px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .courses_lists {

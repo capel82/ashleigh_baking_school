@@ -2,30 +2,30 @@
 {% load static %}
 
 {% block content %}
-<div class="container p-5">
-    <div class="row p-5 my-5 courses_rows">
+<div class="container-fluid  bg-light course_container">
+    <div class="row p-2 my-5">
         <div class="col-md-4 d-flex justify-content-center">
             <img class="img-courses img-fluid" alt="Responsive image" src= "{{ course.photo_course.url }}">
         </div>
         <div class="col-md-8">
             <div class="row course_title">
                 <div class="col-md-12 d-flex justify-content-center">
-                <p class=" pt-2 single_title">{{course.title}}</p>
+                <p class="single_title">{{course.title}}</p>
                 </div>
             </div>
 
-            <div class="row courses_descriptions">
+            <div class="row courses_descriptions py-3">
                 <div class=" col-sm-6 col-md-4 col-lg-6">
+                    <h5> What you will learn:</h5>
                     <ul class="courses_lists">
-                        <h5>What you will learn:</h5>
                         <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list1}}</li>
                         <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list2}}</li>
                         <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list3}}</li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-6">
+                    <h5>What you will bring back:</h5>
                     <ul class="courses_lists">
-                        <h5>What you will bring back:</h5>
                         <li><i class="fas fa-check mx-2"></i>{{course.completion_list1}}.</li>
                         <li><i class="fas fa-check mx-2"></i>{{course.completion_list2}}</li>
                     </ul>
@@ -38,27 +38,21 @@
                 <p><strong>{{course.weekday_datetime|date:"d F yy h:i a"}}</strong></p>
                 <p><strong>Euro {{course.price}}</strong></p>
             </div>
-            <div class="row d-flex justify-content-center mb-2">
+            <div class="row justify-content-center mb-2 px-3">
             <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                         {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
+                        <div class="form-row form-inline">
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="form-group">
+                                    <label class="pr-2" for="id_qty_{{ course.id }}">Quantity: </label>
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_weekdays_{{ course.id }}">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12">
-                                <a href="{% url 'courses' %}" class="btn btn-light add_basket rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shoping</span>
-                                </a>
-                                <input type="submit" class="btn btn-light rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="submit" class="btn add_basket rounded-0 text-uppercase mt-2" value="Add to Basket">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -72,11 +66,37 @@
                 <p><strong>Euro {{course.price}}</strong></p>
                 </div>
             <div class="row d-flex justify-content-center">
-                <a class="btn btn-light add_basket">Add to Basket</a>
+            <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row form-inline">
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="form-group">
+                                    <label class="pr-2" for="id_qty_{{ course.id }}">Quantity: </label>
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_weekends_{{ course.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="submit" class="btn add_basket rounded-0 text-uppercase mt-2" value="Add to Basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+            </div>
             </div>
         </div>
             </div>
         </div><!--col-md-8 div-->
+<div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+        <a href="{% url 'courses' %}" class="btn btn-dark btn-lg rounded-1 my-3">
+            <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Continue Shopping</span>
+         </a>
+    </div>
     </div><!--2nd row div-->
 </div><!--container div-->
 

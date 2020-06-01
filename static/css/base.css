@@ -252,6 +252,10 @@ div .card {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
+
+.category_title {
+    background-color:rgb(255,255,255,0.7);
+}
 /*--single course.html --*/
 .course_container {
     margin-top:100px;

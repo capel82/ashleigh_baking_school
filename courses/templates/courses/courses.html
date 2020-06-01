@@ -21,15 +21,18 @@
 <div class="container">
     <div class="row text-center mt-2">
         <div class="col-md-12">
-            <h2>Baking courses</h2>
+            <h2>Courses</h2>
         </div>
     </div>
     <div class="row my-3">
-        {% if courses %}
-            {% for course in courses %}
+             {% if courses %}
+                {% for course in courses %}
             <div class="col-md-4 mb-3">
             <div class="card text-center" style="width: 22rem;">
                 <img class="card-img-top" src="{{ course.photo_course.url }}"  alt="Card image cap">
+                <div class="card-img-overlay">
+                <h5 class="category_title py-1">{{course.category}}</h5>
+                </div>
                 <div class="card-body">
                     <h5 class="card-header">{{course.title}}</h5>
                 </div>

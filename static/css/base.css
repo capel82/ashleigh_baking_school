@@ -27,7 +27,7 @@ html {
 }
 /*--jumbotron index.html--*/
 .jumbotron {
-    background-image:url('/static/photos/churros.jpg');
+    background-image:url('/media/photos/churros.jpg');
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -65,7 +65,7 @@ html {
 }
 @media only screen and (max-width: 768px) {
     .jumbotron {
-    background-image:url("/static/photos/churros.jpg");
+    background-image:url("/media/photos/churros.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -171,7 +171,7 @@ div .card {
 
 /*--Courses.html--*/
 .jumbotron-courses {
-    background-image:url("/static/photos/baking.jpg");
+    background-image:url("/media/photos/baking.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -287,26 +287,42 @@ h4,h5 {
     font-family: 'san serif', serif;
     font-size:16px;
 }
-.courses_dates {
+.courses_date {
     font-family: 'san serif', serif;
     font-size:18px;
+    background-color: #fff;
+    padding-top:30px;
+    padding-bottom:30px;
 }
 
-.weekdays {
+.weekends {
     color:#525975;
     padding:5px;
-    border: solid 2px;
+    border-bottom: solid 1px;
     margin: 0 50px;
     border-color:#525975;
+    background-color: #fff;
 
 }
-.weekends{
-    color:#8C6A6B;
-    padding: 5px;
-    border: solid 2px;
-    margin: 0 50px;
-    border-color:#8C6A6B;
-}
+
 .add_basket {
     background-color:#BB5978;
+}
+/*--basket.html--*/
+.basket_img {
+    width:140px;
+}
+.basket_container {
+    margin-top:100px;
+    margin-left:0;
+    margin-right:0;
+    padding-right:0;
+    padding-left:0;
+}
+.items_basket_container{
+    padding-left:0;
+    padding-right:0;
+}
+table {
+    width: 100%;
 }

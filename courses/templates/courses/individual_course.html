@@ -31,39 +31,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="row courses_dates">
-            <div class="col-sm-4 col-md-6 weekdays_column">
-            <div class="row d-block text-center">
-                <h5 class="weekdays mb-3">Weekdays</h5>
-                <p><strong>{{course.weekday_datetime|date:"d F yy h:i a"}}</strong></p>
-                <p><strong>Euro {{course.price}}</strong></p>
-            </div>
-            <div class="row justify-content-center mb-2 px-3">
-            <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row form-inline">
-                            <div class="col-12 d-flex justify-content-center">
-                                <div class="form-group">
-                                    <label class="pr-2" for="id_qty_{{ course.id }}">Quantity: </label>
-                                    <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_weekdays_{{ course.id }}">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 d-flex justify-content-center">
-                                <input type="submit" class="btn add_basket rounded-0 text-uppercase mt-2" value="Add to Basket">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </div>
-                    </form>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-6  weekends_column">
-            <div class="row d-block text-center">
-                <h5 class="weekends mb-3">Weekends</h5>
-                <p><strong>{{course.weekends_datetime|date:"d F yy h:i a"}}</strong></p>
-                <p><strong>Euro {{course.price}}</strong></p>
+            <div class="row courses_date">
+        <div class="col-sm-12 col-md-12  weekends_column">
+            <div class="row text-center justify-content-center">
+                <p><strong>Saturday<br> {{course.weekends_datetime|date:"d F yy h:i a"}}<br>Euro {{course.price}}</strong></p>
+    
                 </div>
             <div class="row d-flex justify-content-center">
             <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">

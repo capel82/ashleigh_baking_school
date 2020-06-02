@@ -8,19 +8,21 @@ def basket_contents(request):
     total = 0
     item_count = 0
     basket = request.session.get('basket', {})
-    
-    for course_id, quantity in basket.items():
-        course = get_object_or_404(Course, pk=course_id)
-        total += quantity * course.price
-        item_count += quantity
+
+    for item_id, item_data in basket.items():
+        course = get_object_or_404(Course, pk=item_id)
+        total += item_data * course.price
+        subtotal = item_data * course.price
+        item_count += item_data
         basket_items.append({
-            'course_id': course_id,
-            'quantity': quantity,
+            'item_id': item_id,
+            'quantity': item_data,
+            'subtotal': subtotal,
             'course': course,
         })
 
     grand_total = total
-    
+
     context = {
         'basket_items': basket_items,
         'total': total,

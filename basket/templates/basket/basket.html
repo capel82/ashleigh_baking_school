@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid basket_container mb-2">
+<div class="container-fluid basket_container">
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <h2 class="logo-font mb-4"> Your Shopping Bag</h2>
+                <h2 class="logo-font my-4"> Your Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -31,25 +31,47 @@
                     <td><strong>{{item.course.title}}</strong><br>{{item.course.weekends_datetime|date:"d F yy h:i a"}}</td>
                     <td><img class="img-fluid basket_img rounded p-2" src="{{ item.course.photo_course.url }}"></td>
                     <td>Euro {{item.course.price}}</td>
-                    <td class="text-center">{{item.quantity}}</td>
-                    <td>Euro {{item.course.price}}</td>
+                    <td class="text-center">{{item.quantity}}
+                    </td>
+                    <td>Euro {{item.subtotal }}
+                        <a href = "{% url 'remove' item.item_id %}" class="btn btn-danger btn-sm remove float-right ml-3" id="remove_{{ item.item_id }}"><small>Remove</small>
+                        </a>
+                    </td>
                 </tr>
     {% endfor %}
                 <tr>
                     <td colspan="5" class="pt-5 text-right">
-                        <h5><strong>Basket Total: EURO {{ total|floatformat:2 }}</strong></h5>
+                        <h5><strong>Grand Total: EURO {{ total|floatformat:2 }}</strong></h5>
                     </td>
                 </tr>
             </tbody>
         </table>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <a href="{% url 'courses' %}" class="btn btn-dark rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="#" class="btn btn-dark rounded-0 btn-lg">
+                <span class="text-uppercase">Checkout</span>
+                <span class="icon">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </a>
+        </div>
+    </div>
 
         </div><!--div for col-->
     </div><!--div for row-->
     {% else %}
     <div class="row mb-5">
         <div class="col-md-6 text-center">
-            <p class="lead mb-5">Your basket is empty.</p>
-            <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <h4 class="my-5">Your basket is empty.</h4>
+            <a href="{% url 'courses' %}" class="btn btn-dark rounded-0 btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -61,3 +83,4 @@
 
  
 {% endblock %}
+

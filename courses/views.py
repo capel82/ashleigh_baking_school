@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
 from .models import Course, Category
 
 def all_courses(request):
@@ -27,6 +26,6 @@ def course(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
 
     content = {
-        'course' : course
+        'course': course
     }
     return render(request, 'courses/individual_course.html', content)

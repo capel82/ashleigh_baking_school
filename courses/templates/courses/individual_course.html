@@ -44,8 +44,12 @@
                             <div class="col-12 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="pr-2" for="id_qty_{{ course.id }}">Quantity: </label>
-                                    <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_weekends_{{ course.id }}">
+
+                                        <!--integer for quantity-->
+                                        <input class="form-control qty_input" type="number" 
+                                        name="quantity" value="1" min="1" max="99" 
+                                        data-item_id="{{ course.id }}" id="id_weekends_{{ course.id }}">
+
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +58,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>
+            </form>
             </div>
             </div>
         </div>
@@ -73,3 +77,5 @@
 </div><!--container div-->
 
 {% endblock %}
+
+

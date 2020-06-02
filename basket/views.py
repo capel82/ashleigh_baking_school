@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 # Create your views here.
 def view_basket(request):
-    
     return render(request, 'basket/basket.html')
 
 def add_to_bag(request, item_id):
@@ -16,7 +15,15 @@ def add_to_bag(request, item_id):
         basket[item_id] += quantity
     else:
         basket[item_id] = quantity
+    request.session['basket'] = basket
+    return redirect(redirect_url)
+
+def remove(request, item_id):
+
+    basket = request.session.get('basket', {})
+
+    basket.pop(item_id)
 
     request.session['basket'] = basket
-    print(request.session['basket'])
-    return redirect(redirect_url)
+
+    return render(request, 'basket/basket.html')

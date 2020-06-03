@@ -65,7 +65,7 @@ html {
 }
 @media only screen and (max-width: 768px) {
     .jumbotron {
-    background-image:url("/media/photos/churros.jpg");
+    background-image:url("/static/photos/churros.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -171,7 +171,7 @@ div .card {
 
 /*--Courses.html--*/
 .jumbotron-courses {
-    background-image:url("/media/photos/baking.jpg");
+    background-image:url("/static/img/baking.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -330,7 +330,12 @@ h4,h5 {
 table {
     width: 100%;
 }
-.update-link, .removed-item {
-    cursor:pointer;
 
+.filter_button {
+    background-color: #525975;
+    opacity:0.9;
+    color:#fff;
+    font-size:20px;
+    margin-right: 10px;
+    margin-top: 10px;
 }

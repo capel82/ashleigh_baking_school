@@ -5,7 +5,7 @@ from .models import Course, Category
 def all_courses(request):
     """ A view to show all courses, including sorting and search queries """
 
-    courses = Course.objects.all()
+    courses = Course.objects.order_by('weekends_datetime').filter(is_published=True)
     query = None
     category = None
 

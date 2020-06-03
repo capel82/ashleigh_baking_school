@@ -346,3 +346,25 @@ table {
     margin-right: 10px;
     margin-top: 10px;
 }
+
+/*--CHECKOUT--*/
+.checkout_container {
+    margin-top: 150px;
+    padding-left:80px;
+    padding-right:80px;
+   
+}
+.checkout_container h1 {
+    padding:10px;
+    border-bottom: solid #4f4f4f 1px;
+}
+.fieldset-label {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.grand_total {
+    font-size: 20px;
+    font-weight:500;
+    font-family: 'Playfair Display', serif;
+    color:#525975;
+}

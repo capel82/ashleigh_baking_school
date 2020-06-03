@@ -18,7 +18,7 @@ class OrderAdmin(admin.ModelAdmin):
               'street_address2', 'county', 'grand_total',)
 
     list_display = ('order_number', 'date', 'full_name',
-                'street_address1','town_or_city','grand_total',)
+                    'street_address1','town_or_city','grand_total',)
 
     ordering = ('-date',)
 

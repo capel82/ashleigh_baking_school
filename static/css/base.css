@@ -102,6 +102,13 @@ html {
     font-family: 'Playfair Display', serif;
 }
 }
+#announcement {
+    background-color: #91ACC0;
+    color: #fff;
+}
+#announcement h2 {
+    color:#fff;
+}
 /*--browse courses/giftvouchers cards--*/
 #browse {
     margin-top:20px;
@@ -155,7 +162,7 @@ div .card {
 }
 /*--footer--*/
 #footer-details {
-    background-color: #91ACC0;
+    background-color: #525975;
 }
 
 .footer-icons p, {

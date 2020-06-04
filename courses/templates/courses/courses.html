@@ -32,17 +32,17 @@
             <a href="{% url 'courses' %}?category=breads" class="btn btn-secondary btn-lg filter_button" role="button" aria-disabled="true">Breads</a>
         </div>
     </div>
-    <div class="row my-3">
+    <div class="row mx-lg-n5">
              {% if courses %}
                 {% for course in courses %}
-            <div class="col-md-4 mb-3">
-            <div class="card text-center" style="width: 22rem;">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3 px-lg-4 justify-content-center">
+            <div class="card text-center" style="width: 18rem;">
                 <img class="card-img-top" src="{{ course.photo_course.url }}"  alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-header">{{course.title}}</h5>
                     <h5 class="text-info pt-2">{{course.category}}</h5>
                 </div>
-                    <ul class="list-group">
+                    <ul class="list-group list-group-flush">
                         <li class="list-group-item p-0">{{course.weekends_datetime|date:"d F yy h:i a"}}<br>{{course.day}}</li>
                     </ul>
                 <div class="card-body">

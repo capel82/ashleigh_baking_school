@@ -1,6 +1,17 @@
 html {
     height: 100%;
 }
+/*--REUSABLE CSS --*/
+h1, h2, h3 {
+    color: #4f4f4f;
+    font-family: 'Playfair Display', serif;
+}
+h4,h5 {
+    font-family: 'Playfair Display', serif;
+}
+div .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 /*--header and navbar--*/
 #header-container {
     background-color:#525975;
@@ -9,14 +20,30 @@ html {
     height: 1rem;
     width:1rem;
 }
-/* from Bulma for icons in header and navabr--*/
-.icon {
+/*--footer--*/
+#footer-details {
+    background-color: #525975;
+}
+
+.footer-icons p, {
+    color:#fff;
+}
+
+.social_titles {
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 25px;
+    padding:0;
+}
+/* from Bulma for icons in header and navabar--*/
+/*.icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1rem;
     width: 1rem;
 }
+*/
 
 .logo-font {
     font-family: 'Playfair Display', serif;
@@ -25,6 +52,7 @@ html {
 .main-logo-link {
     width: fit-content;
 }
+
 /*--jumbotron index.html--*/
 .jumbotron {
     background-image:url('/static/img/churros.jpg');
@@ -65,7 +93,7 @@ html {
 }
 @media only screen and (max-width: 768px) {
     .jumbotron {
-    background-image:url("/static/photos/churros.jpg");
+    background-image:url("/static/img/churros.jpg");
     background-position:center;
     background-attachment: fixed;
     -webkit-background-size:cover;
@@ -98,7 +126,7 @@ html {
 }
 
 .intro_messages {
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Playfair Display', serif;
 }
 }
@@ -109,49 +137,7 @@ html {
 #announcement h2 {
     color:#fff;
 }
-/*--browse courses/giftvouchers cards--*/
-#browse {
-    margin-top:20px;
-    margin-bottom:20px;
-    padding:20px;
-    font-family: 'Playfair Display', serif;
-}
-#browse p {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 20px;
-    color:#4f4f4f;
-}
-h2, h3 {
-    color: #4f4f4f;
-    font-family: 'Playfair Display', serif;
-}
-.index-card {
-    margin-top:20px;
-    font-family: 'Playfair Display', serif;
-}
-.img-index{
-    height: 350px;
-}
-div .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.cardbody1 {
-    background-color: #BB5978;
-    opacity:0.8;
-}
 
-.cardbody2 {
-    background-color:#91ACC0;
-    opacity:0.8;
-}
-.card-link {
-    font-size: 30px;
-    color: #000;
-}
-.index-card a:hover {
-    color:#fff;
-}
 /*--students feebback--*/
 .comments {
     font-family: 'Playfair Display', serif;
@@ -160,23 +146,8 @@ div .card {
     padding:0;
     color: #ffd633;
 }
-/*--footer--*/
-#footer-details {
-    background-color: #525975;
-}
 
-.footer-icons p, {
-    color:#fff;
-}
-
-.social_titles {
-    font-family: 'Dancing Script', cursive;
-    color: #ffffff;
-    font-size: 25px;
-    padding:0;
-}
-
-/*--Courses.html--*/
+/*--COURSES.HTML--*/
 .jumbotron-courses {
     background-image:url("/static/img/baking.jpg");
     background-position:center;
@@ -223,68 +194,29 @@ div .card {
 }
 }
 
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: #4f4f4f;
-}
-div .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.index-card {
-    margin-top:20px;
-    font-family: 'Playfair Display', serif;
-}
-.cardbody1 {
-    background-color: #BB5978;
-    opacity: 0.8;
-}
-.cardbody2 {
-    background-color:#91ACC0;
-    opacity:0.8;
-}
-.cardbody3 {
-    background-color: #8C6A6B;
-    opacity:0.8;
-}
-.card-link {
-    font-size: 30px;
-    color: #000;
-}
-.index-card a:hover {
-    color:#fff;
-}
-
 .list-group-item {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
-
-.category_title {
-    background-color:rgb(255,255,255,0.7);
+/*--aligning cards to be more centered in devices from iphone6 to iphoneX--*/
+@media (min-width: 375px) and (max-width: 767px) {
+    .card {
+        margin-left:25px;
+    }
 }
 /*--single course.html --*/
 .course_container {
     margin-top:100px;
 }
-.single_title {
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    margin:0;
-    padding:5px;
-}
 
-h1,h2 {
-    font-family: 'Playfair Display', serif;
-    color: #4f4f4f;
-}
-h4,h5 {
-    font-family: 'Playfair Display', serif;
-}
 .course_title {
     background-color:#91ACC0;
     color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    
 }
 .img-courses{
     width:450px;
@@ -318,6 +250,26 @@ h4,h5 {
 
 .add_basket {
     background-color:#BB5978;
+}
+@media (max-width: 575.98px) { 
+    .course_container {
+    margin-top:150px;
+    }
+  .course_title {
+    background-color:#91ACC0;
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    text-align: center;
+    
+}
+.img-courses{
+    width:325px;
+    height:325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 }
 /*--basket.html--*/
 .basket_img {

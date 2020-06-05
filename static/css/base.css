@@ -52,6 +52,17 @@ div .card {
 .main-logo-link {
     width: fit-content;
 }
+/* --bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 68px;
+    right: 15px;
+    z-index: 99999999999;
+}
+.custom-toast {
+    overflow: visible;
+}
 
 /*--INDEX.HTML--*/
 .jumbotron {

@@ -2,17 +2,11 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid basket_container">
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-                <h2 class="logo-font my-4"> Your Shopping Bag</h2>
-                <hr>
-            </div>
-        </div>
-<div class="container-fluid items_basket_container">
+
+<div class="container basket_container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
+        <h2 class="my-4"> Your Shopping Bag</h2>
          {% if basket_items %}
         <table class="table table-responsive table-hover">
              <thead>
@@ -29,7 +23,7 @@
             <tbody>
                  <tr>
                     <td><strong>{{item.course.title}}</strong><br>{{item.course.weekends_datetime|date:"d F yy h:i a"}}</td>
-                    <td><img class="img-fluid basket_img rounded p-2" src="{{ item.course.photo_course.url }}"></td>
+                    <td><img class="img-fluid basket_img rounded p-2" src="{{ item.course.photo_course.url }}" alt="no_image.png"></td>
                     <td>Euro {{item.course.price}}</td>
                     <td class="text-center">{{item.quantity}}
                     </td>
@@ -46,6 +40,8 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+    </div>
     <div class="row mb-3">
         <div class="col-md-6">
             <a href="{% url 'courses' %}" class="btn btn-dark rounded-0 btn-lg">
@@ -64,9 +60,6 @@
             </a>
         </div>
     </div>
-
-        </div><!--div for col-->
-    </div><!--div for row-->
     {% else %}
     <div class="row mb-5">
         <div class="col-md-6 text-center">
@@ -79,8 +72,8 @@
             </a>
         </div>
     </div>
- {% endif %}              
+</div>
+ {% endif %} 
 
- 
 {% endblock %}
 

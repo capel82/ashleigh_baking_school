@@ -53,7 +53,7 @@ div .card {
     width: fit-content;
 }
 
-/*--jumbotron index.html--*/
+/*--INDEX.HTML--*/
 .jumbotron {
     background-image:url('/static/img/churros.jpg');
     background-position:center;
@@ -204,7 +204,7 @@ div .card {
         margin-left:25px;
     }
 }
-/*--single course.html --*/
+/*--SINGLE COURSE.html --*/
 .course_container {
     margin-top:100px;
 }
@@ -223,6 +223,9 @@ div .card {
     height:450px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.courses_descriptions {
+    margin: 0 10px 20px 0;
+}
 .courses_lists {
     list-style: none;
     padding:0;
@@ -236,17 +239,9 @@ div .card {
     background-color: #fff;
     padding-top:30px;
     padding-bottom:30px;
+    margin: 0 20px 20px 0;
 }
 
-.weekends {
-    color:#525975;
-    padding:5px;
-    border-bottom: solid 1px;
-    margin: 0 50px;
-    border-color:#525975;
-    background-color: #fff;
-
-}
 
 .add_basket {
     background-color:#BB5978;
@@ -271,21 +266,34 @@ div .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 }
-/*--basket.html--*/
+@media (min-width: 767px) and (max-width: 1200px){ 
+    .course_container {
+    margin-top:150px;
+    }
+  .course_title {
+    background-color:#91ACC0;
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    text-align: center;
+    
+}
+.img-courses{
+    width:450px;
+    height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+}
+/*--BASKET.HTML--*/
 .basket_img {
     width:140px;
 }
 .basket_container {
     margin-top:130px;
-    margin-left:0;
-    margin-right:0;
-    padding-right:0;
-    padding-left:0;
 }
-.items_basket_container{
-    padding-left:0;
-    padding-right:0;
-}
+
 table {
     width: 100%;
 }
@@ -299,7 +307,7 @@ table {
     margin-top: 10px;
 }
 
-/*--CHECKOUT--*/
+/*--CHECKOUT.html--*/
 .checkout_container {
     margin-top: 150px;
     padding-left:80px;

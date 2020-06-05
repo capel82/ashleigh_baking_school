@@ -18,6 +18,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
+        messages.success(request, f'Updated {course.title} quantity')
+
     else:
         basket[item_id] = quantity
         messages.success(request, f'{course.title} added')
@@ -27,10 +29,10 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 def remove(request, item_id):
+    course = Course.objects.get(pk=item_id)
     basket = request.session.get('basket', {})
-
     basket.pop(item_id)
 
     request.session['basket'] = basket
-
+    messages.warning(request, f'{course.title} removed')
     return render(request, 'basket/basket.html')

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
-
+#allowing order items to be edited in the admin
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
@@ -10,12 +10,14 @@ class OrderLineItemAdminInline(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 
-    readonly_fields = ('order_number', 'date','grand_total',)
+    #fields that cannot be edited'readonly_fields'
+    readonly_fields = ('order_number', 'date',)
 
+    #fields that can be edited.
     fields = ('order_number', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
-              'street_address2', 'county', 'grand_total',)
+              'street_address2', 'county','grand_total',)
 
     list_display = ('order_number', 'date', 'full_name',
                     'street_address1','town_or_city','grand_total',)

@@ -6,15 +6,59 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid checkout_container">
+<div class="container-fluid checkout_container mb-3">
     <div class="row">
-         <div class="col-md-8">
-            <h1 class="m-4"> Checkout</h1>
-            <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+         <div class="col-md-12">
+            <h1 class="m-4"> Thank you</h1>
+            <p class="text-black">Email Confirmation has been sent to <strong>{{order.email}}</strong>.</p>
+        </div>
+    </div>
+    <div class="row wrapper">
+        <div class="col bg-light">
+
+            <div class="row p-2">
+                <div class="col-12">
+                    <h5> Your Confirmed Order Details:</h5>
+                </div>
+            </div>
+            <div class="row pl-2">
+                    <div class= "col-12 col-md-8">
+                        <p class="text-info">Order Number: {{order.order_number}}</p>
+                        <p clas="mt-0">Order Date: {{order.date|date:"d F yy h:i a"}} </p>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Course</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in order.lineitems.all %}
+                            <tr>
+                                <td><strong>{{item.course.title}}</strong><br> {{item.course.weekends_datetime|date:"d F yy h:i a"}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.course.price}}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <h5> Grand Total: {{item.grand_total}}</h5>
+                </div>
+            </div>
         </div>
     </div>
 
         
-    </div><!-- row end div-->
-</div><!--container end div-->
+</div><!-- container end div-->
+
 {% endblock %}

@@ -25,7 +25,6 @@ def basket_contents(request):
 
     context = {
         'basket_items': basket_items,
-        'total': total,
         'item_count': item_count,
         'grand_total': grand_total,
     }

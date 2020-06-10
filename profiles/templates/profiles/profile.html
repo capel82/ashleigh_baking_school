@@ -11,7 +11,20 @@
         <div class="col">
             <h2>My Profile</h2>
             <hr>
-            {{profile}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Delivery Information</p>
+            <form action="{% url 'profile' %}" method="POST" id="update_delivery_form">
+                {% csrf_token %}
+                {{form |crispy}}
+                <button class="btn btn-dark float-right">Update</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p>Order History</p>
+            {{order}}
         </div>
     </div>
 

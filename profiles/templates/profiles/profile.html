@@ -22,12 +22,40 @@
                 <button class="btn btn-dark float-right">Update</button>
             </form>
         </div>
-        <div class="col-md-6">
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
             <p>Order History</p>
-            {{order}}
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Order Number</th>
+                        <th scope="col">Items</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{order.date|date:"d F yy"}}</td>
+                        <td>{{order.order_number}}</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for item in order.lineitems.all %}
+                                <li> <strong>{{item.course.title}}</strong><br>
+                                    {{item.course.weekends_datetime|date:"d F yy h:i a"}}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    <td>{{order.grand_total}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>   
         </div>
     </div>
-
 </div>
 
 {% endblock %}

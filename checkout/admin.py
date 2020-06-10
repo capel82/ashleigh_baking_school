@@ -16,7 +16,7 @@ class OrderAdmin(admin.ModelAdmin):
                        'stripe_pid')
 
     #fields that can be edited.
-    fields = ('order_number', 'date', 'full_name',
+    fields = ('order_number', 'date', 'user_profile', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county','grand_total',

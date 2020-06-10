@@ -336,3 +336,7 @@ div .card {
     font-family: 'Playfair Display', serif;
     color:#525975;
 }
+/*--allauth templates--*/
+.allauth_container {
+    margin-top:150px;
+}

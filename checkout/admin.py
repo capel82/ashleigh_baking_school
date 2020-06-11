@@ -11,7 +11,7 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 
     #fields that cannot be edited'readonly_fields'
-    readonly_fields = ('order_number', 'date',
+    readonly_fields = ('order_number', 'date','order_total',
                        'grand_total', 'original_bag',
                        'stripe_pid')
 
@@ -19,8 +19,8 @@ class OrderAdmin(admin.ModelAdmin):
     fields = ('order_number', 'date', 'user_profile', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
-              'street_address2', 'county','grand_total',
-              'orginal_bag', 'stripe_pid',)
+              'street_address2', 'county','order_total', 'grand_total',
+              'original_bag', 'stripe_pid',)
 
     list_display = ('order_number', 'date', 'full_name',
                     'street_address1','town_or_city','grand_total',)

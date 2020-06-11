@@ -340,3 +340,43 @@ div .card {
 .allauth_container {
     margin-top:150px;
 }
+/*--contact.html--*/
+.jumbotron-contact {
+    background-image:url("/static/img/contact.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 75vh;
+    margin-top: 0;
+}
+.contact_left, .contact_right{
+    margin: 35px 0px;
+    padding: 20px 0px;
+    font-family: 'Playfair Display', cursive;
+}
+
+.contact_left p {
+    color: #4f4f4f;
+    margin-bottom:10px;
+}
+
+
+#make_inquiry{
+    background-color: #91ACC0;
+
+}
+#make_inquiry:hover {
+    background-color:#fff;
+    border: solid 2px #91ACC0;
+    color:#91ACC0;
+}
+#inquiryLabel {
+    color:#91ACC0;
+}
+form {
+    text-align: left;
+}
+#send_message {
+    background-color: #91ACC0;
+}

@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from .models import Team
 
-# Create your views here.
 def team(request):
-    return render(request, 'about/team.html')
+
+    teams = Team.objects.all()
+
+    context = {
+        'teams': teams,
+    }
+
+    return render(request, 'about/team.html', context)
 
 def kitchen(request):
+
     return render(request, 'about/kitchen.html')

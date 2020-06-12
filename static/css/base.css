@@ -380,3 +380,32 @@ form {
 #send_message {
     background-color: #91ACC0;
 }
+
+.jumbotron-team {
+    background-image:url("/static/img/strawberry.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 80vh;
+    margin-top: 0;
+}
+.img-chef {
+    height:350px;
+    width:350px;
+    margin-bottom:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.chef-name {
+    margin:20px;
+    font-family: 'san serif', serif;
+}
+.img-kitchen {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item-intro {
+    font-size:20px;
+    font-family: 'san serif', serif;
+
+}
+

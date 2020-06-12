@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mb-5">
+    <div class="row border-top mt-5 my-3">
+        <div class="col-md-12 text-center p-5">
+            <hr class="mt-5">
+            <h2 class="mt-3">Our Kitchen</h2>
+            <hr>
+            <p class="item-intro">Our kitchen was originally a cottage which Ashleigh owned since 1996.  She has converted the cottage to a well-equipped studio kitchen for teaching. It can accommodate students up to group of ten.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-kitchen card-img-top img-thumbnail" src="{% static 'img/kitchen.jpg' %}" alt="Card image cap">
+        </div>
+        <div class="col-md-6 text-center mt-5">
+            <h4>Our Address:</h4>
+            <address>46, Bray Street, Dublin 2 </address>
+            <h4 class="mt-4">Public Transport</h4>
+            <p>Bus No.48 and 145</p>
+            <p> Tram GREEN line - Dawson Street Stop</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

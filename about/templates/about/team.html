@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div class="jumbotron jumbotron-team"> 
+        <div class="overlay mx-auto p-5 text-center">
+            <p class="display-4 jumbotron_shoutout">About Us</p>
+            <hr class="my-4">
+            <ul class="jumbotron_descriptions">
+            <li><i class="fas fa-check mx-2"></i>Fully qualified and professionals.</li>
+            <li><i class="fas fa-check mx-2"></i> Great passions in teaching.</li>
+            <li><i class="fas fa-check mx-2"></i>Aim to make baking easily learned skill for all ages.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center my-5 border-bottom">
+    <h2>Meet Our Team</h2>
+    </div>
+    <div class="row">  
+        <div class="col-md-6 text-center px-5">
+        <h4 class="chef-name">Ashleigh Brown</h4>
+        <img class="img-chef card-img-top img-fluid img-thumbnail rounded-circle" src="images/ashleigh.jpg" alt="Card image cap">
+        <p class="item-intro">Ashleigh is the <strong>Founder</strong> of this baking school. She was trained in well-knowned <em> Le Cordon Bleu London, UK.</em> She has passions for teaching and ambition of making baking an easy learned skills for everyone.</p>
+        </div>
+        <div class="col-md-6 text-center">
+        <h4 class="chef-name">Gordon Hines</h4>
+        <img class="img-chef card-img-top img-fluid img-thumbnail rounded-circle" src="images/man.jpg" alt="Card image cap">
+        <p class="item-intro">Gordon was trained in well-knowned <em> Le Cordon Bleu Paris, France.</em> He owned and ran a Patisserie shop in Paris for 5 years before returning home to Dublin to be with his parents.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

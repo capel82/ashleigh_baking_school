@@ -1,10 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-courses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav_title nav-link mr-5" href="{% url 'courses' %}"id="all-courses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Baking Courses
             </a>
-            <div class="dropdown-menu bg-light rounded-0 border-0" aria-labelledby="all-courses-link">
+            <div class="dropdown-menu" aria-labelledby="all-courses-link">
                 <a href="{% url 'courses' %}?category=pastry" class="dropdown-item">Pastry </a>
                 <a href="{% url 'courses' %}?category=cakes" class="dropdown-item ">Cakes </a>
                 <a href="{% url 'courses' %}?category=breads" class="dropdown-item ">Breads </a>
@@ -13,19 +13,19 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav_title nav-link mr-5" href="#" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About Us
             </a>
-            <div class="dropdown-menu bg-light rounded-0 border-0" aria-labelledby="about">
+            <div class="dropdown-menu" aria-labelledby="about">
                 <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
                 <a href="{% url 'kitchen' %}" class="dropdown-item">Our Kitchen</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'contact' %}" id="contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav_title nav-link mr-5" href="{% url 'contact' %}" id="contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact Us
             </a>
-            <div class="dropdown-menu bg-light rounded-0 border-0" aria-labelledby="about">
+            <div class="dropdown-menu" aria-labelledby="about">
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
             </div>
         </li>

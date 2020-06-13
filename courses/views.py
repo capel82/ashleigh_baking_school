@@ -9,6 +9,7 @@ def all_courses(request):
     query = None
     category = None
 
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')

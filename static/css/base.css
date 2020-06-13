@@ -25,33 +25,35 @@ div .card {
     background-color: #525975;
 }
 
-.footer-icons p, {
+.footer-icons p {
     color:#fff;
 }
-
+.footer-icons i:hover {
+    color:#ffc107!important;
+}
 .social_titles {
     font-family: 'Dancing Script', cursive;
     color: #ffffff;
     font-size: 25px;
     padding:0;
 }
-/* from Bulma for icons in header and navabar--*/
-/*.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1rem;
-    width: 1rem;
-}
-*/
 
-.logo-font {
+.nav_title{
     font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropdown-menu{
+    background-color: #dfe6ec;
+    border-right: 0;
+    border-left:0;
+    border-bottom:0;
+    border-top: solid 3px #525975;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width:8rem;
+    margin:.225rem 0 0;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
 /* --bootstrap toasts */
 
 .message-container {
@@ -147,6 +149,15 @@ div .card {
 }
 #announcement h2 {
     color:#fff;
+}
+#next_event_anchor{
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    border: solid 1px #fff;
+}
+#next_event_anchor:hover {
+    color: #91ACC0;
+    background-color: #fff;
 }
 
 /*--students feebback--*/

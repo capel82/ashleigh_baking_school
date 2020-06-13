@@ -18,7 +18,17 @@
 <div id="announcement" class="container-fluid">
     <div class=" col-md-12 text-center">
         <h2 class="pt-4">Next Baking Course </h2>
-        <h4 class="pb-4">24 June 2020 Beginner Wednesday 7.00pm-9.30pm </h4>
+        {% if courses %}
+            {% for course in courses %}
+                <h4 class="pb-2">{{course.weekends_datetime|date:"d F yy h:i a"}} </h4>
+                <a id="next_event_anchor" class="btn btn-lg mb-4" href="{% url 'course' course.id %}" role="button">{{course.title}}</a>
+               
+            {% endfor %}
+        {% else %}
+        <div class="col-md-12 pb-3">
+            <h4>There no courses available </h4>
+        </div>
+        {% endif %}
     </div>
 </div>
 

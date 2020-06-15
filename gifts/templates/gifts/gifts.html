@@ -1,1 +1,45 @@
-<h1> Gifts Page </h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <div class="jumbotron jumbotron-gifts"> 
+        <div class="overlay mx-auto p-5 text-center">
+            <h4 class="display-4">Gift Vouchers</h4>
+            <hr class="my-4">
+            <ul class="jumbotron_descriptions">
+            <li><i class="fas fa-check mx-2"></i>Send special gifts to your family and friends.</li>
+            <li><i class="fas fa-check mx-2"></i> Free delivery throughout Ireland.</li>
+            <li><i class="fas fa-check mx-2"></i>Expiry in 5 years.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+    {% if gifts %}
+        {% for gift in gifts %}
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 600px;">
+                <div class="row no-gutters">
+                    <div class="col-md-6">
+                        <img src="{{gift.image.url}}" class="card-img gift_image" style ="width:100%; height:100%" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{gift.title}}</h5>
+                            <p class="card-text">Euro {{gift.price}}</p>
+                             <a class="btn btn-info" href="{% url 'gift' gift.id %}" role="button">More Info</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+ 
+{% endblock %}

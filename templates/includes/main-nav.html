@@ -13,6 +13,20 @@
         </li>
 
         <li class="nav-item dropdown">
+            <a class="nav_title nav-link mr-5" href="{% url 'gifts' %}"id="all-gifts-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gift Vouchers
+            </a>
+            <div class="dropdown-menu" aria-labelledby="all-courses-link">
+                <a href="#" class="dropdown-item">Birthday </a>
+                <a href="#" class="dropdown-item ">Congratulations </a>
+                <a href="#" class="dropdown-item ">Thank you </a>
+                <a href="#" class="dropdown-item ">Wedding </a>
+                <a href="#" class="dropdown-item ">Custom </a>
+                <a href="{% url 'gifts' %}" class="dropdown-item"><strong>All Gifts Vouchers</strong></a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
             <a class="nav_title nav-link mr-5" href="#" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About Us
             </a>

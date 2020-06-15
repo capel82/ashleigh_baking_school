@@ -420,3 +420,13 @@ form {
 
 }
 
+/*--gifts.html--*/
+.jumbotron-gifts{
+    background-image:url('/static/img/gifts.jpg');
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 55vh;
+    margin-top: 0;
+}

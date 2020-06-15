@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="overlay mt-5"></div>
+<div class="container bg-light my-5 p-4">
+    <div class="row text-center mt-5">
+        <div class="col-md-12">
+            <h3>Filtered by Category: </h3>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 pb-5">
+            <a href="{% url 'gifts' %}" class="btn btn-secondary filter_button" role="button" aria-disabled="true">All</a>
+            <a href="#" class="btn btn-secondary  filter_button" role="button" aria-disabled="true">Birthday</a>
+            <a href="#" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Congratulations</a>
+            <a href="#" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Thank You</a>
+             <a href="#" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Wedding</a>
+             <a href="#" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Custom</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img class="img-courses img-fluid" alt="Responsive image"  style="width:100%;" src= "{{ gift.image.url }}">    
+        </div>
+        <div class="col-md-7">
+        <h4>{{gift.title}}</h4>
+        <h5>Euro {{gift.price}}</h5>
+        <form action="#" method="POST" >
+        <div class="form-group">
+            <label for="RecipientName">Recipient Name</label>
+            <input type="name" class="form-control" id="RecipientName" placeholder="Recipient Name">
+        </div>
+        <div class="form-group">
+            <label for="messages">Personal Messages</label>
+            <textarea class="form-control" id="messages" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+         </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+                 </select>
+            </div>
+        </div>
+        <button id="send_message" type="submit" class="btn">Add to basket</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

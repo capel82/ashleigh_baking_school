@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'home',
     'courses',
     'basket',
-    'checkout',
+    'checkout.apps.CheckoutConfig',
     'profiles',
     'contact',
     'about',

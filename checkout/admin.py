@@ -12,7 +12,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     #fields that cannot be edited'readonly_fields'
     readonly_fields = ('order_number', 'date',
-                       'grand_total', 'original_bag',
+                        'original_bag',
                        'stripe_pid')
 
     #fields that can be edited.
@@ -23,7 +23,7 @@ class OrderAdmin(admin.ModelAdmin):
               'original_bag', 'stripe_pid',)
 
     list_display = ('order_number', 'date', 'full_name',
-                    'street_address1','town_or_city','grand_total',)
+                    'street_address1','town_or_city', 'grand_total',)
 
     ordering = ('-date',)
 

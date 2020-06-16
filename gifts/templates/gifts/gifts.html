@@ -17,6 +17,21 @@
     </div>
 </div>
 <div class="container">
+    <div class="row text-center mt-5">
+        <div class="col-md-12">
+            <h3>Filtered by Category: </h3>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 pb-5">
+            <a href= "{% url 'gifts' %}" class="btn btn-secondary filter_button" role="button" aria-disabled="true">All</a>
+            <a href= "{% url 'gifts' %}?category=Birthday" class="btn btn-secondary  filter_button" role="button" aria-disabled="true">Birthday</a>
+            <a href="{% url 'gifts' %}?category=Congratulations" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Congratulations</a>
+            <a href="{% url 'gifts' %}?category=Thank You" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Thank You</a>
+             <a href="{% url 'gifts' %}?category=Wedding" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Wedding</a>
+             <a href="{% url 'gifts' %}?category=Custom" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Custom</a>
+        </div>
+    </div>
     <div class="row">
     {% if gifts %}
         {% for gift in gifts %}

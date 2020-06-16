@@ -20,6 +20,9 @@ div .card {
     height: 1rem;
     width:1rem;
 }
+.dropdown a:hover {
+    background-color: #91ACC0;
+}
 /*--footer--*/
 #footer-details {
     background-color: #525975;

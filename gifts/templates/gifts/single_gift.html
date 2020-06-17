@@ -25,38 +25,23 @@
         </div>
         <div class="col-md-7">
         <h4>{{gift.title}}</h4>
-        <h5>Euro {{gift.price}}</h5>
-        <form action="#" method="POST" >
+        <h5 class="my-4 text-info">Euro {{gift.price}}</h5>
+        <form action= "{% url 'add_to_bag' gift.id %}" method="POST" >
+        {% csrf_token %}
         <div class="form-group">
-            <label for="RecipientName">Recipient Name</label>
-            <input type="name" class="form-control" id="RecipientName" placeholder="Recipient Name">
-        </div>
-        <div class="form-group">
-            <label for="messages">Personal Messages</label>
-            <textarea class="form-control" id="messages" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-         </div>
-        <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+            <label class="pr-2" for="id_qty_{{ gift.id }}">Quantity: </label>
+
+            <!--integer for quantity-->
+            <input class="form-control qty_input" type="number" 
+            name="quantity" value="1" min="1" max="99" 
+            data-item_id="{{ gift.id }}" id="id_qty_{{ gift.id }}">
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-                 </select>
-            </div>
+        <div class="col-12 d-flex justify-content-center">
+            <input type="submit" class="btn add_basket text-uppercase mt-2" value="Add to Basket">
         </div>
-        <button id="send_message" type="submit" class="btn">Add to basket</button>
+        <div>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </div>
         </form>
         </div>
     </div>

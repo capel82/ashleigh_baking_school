@@ -17,11 +17,11 @@
                 Gift Vouchers
             </a>
             <div class="dropdown-menu" aria-labelledby="all-courses-link">
-                <a href="#" class="dropdown-item">Birthday </a>
-                <a href="#" class="dropdown-item ">Congratulations </a>
-                <a href="#" class="dropdown-item ">Thank you </a>
-                <a href="#" class="dropdown-item ">Wedding </a>
-                <a href="#" class="dropdown-item ">Custom </a>
+                <a href="{% url 'gifts' %}?category=Birthday" class="dropdown-item">Birthday </a>
+                <a href="{% url 'gifts' %}?category=Congratulations" class="dropdown-item ">Congratulations </a>
+                <a href="{% url 'gifts' %}?category=Thank You" class="dropdown-item ">Thank you </a>
+                <a href="{% url 'gifts' %}?category=Wedding" class="dropdown-item ">Wedding </a>
+                <a href="{% url 'gifts' %}?category=Custom" class="dropdown-item ">Custom </a>
                 <a href="{% url 'gifts' %}" class="dropdown-item"><strong>All Gifts Vouchers</strong></a>
             </div>
         </li>
@@ -35,13 +35,9 @@
                 <a href="{% url 'kitchen' %}" class="dropdown-item">Our Kitchen</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav_title nav-link mr-5" href="{% url 'contact' %}" id="contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact Us
-            </a>
-            <div class="dropdown-menu" aria-labelledby="about">
-                <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
-            </div>
+        <li class="nav-item">
+        <a class="nav_title nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
+    
     </ul>
 </div>

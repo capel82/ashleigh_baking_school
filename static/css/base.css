@@ -223,6 +223,10 @@ div .card {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
+.page-item {
+    background-color: #4f4f4f;
+    color:#000;
+}
 /*--aligning cards to be more centered in devices from iphone6 to iphoneX--*/
 @media (min-width: 375px) and (max-width: 767px) {
     .card {

@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from courses.models import Course
+from gifts.models import Gift
 
 def basket_contents(request):
 
@@ -11,6 +12,7 @@ def basket_contents(request):
 
     for item_id, item_data in basket.items():
         course = get_object_or_404(Course, pk=item_id)
+
         total += item_data * course.price
         subtotal = item_data * course.price
         item_count += item_data

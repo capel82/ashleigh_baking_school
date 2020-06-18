@@ -5,25 +5,17 @@
                 Baking Courses
             </a>
             <div class="dropdown-menu" aria-labelledby="all-courses-link">
-                <a href="{% url 'courses' %}?category=pastry" class="dropdown-item">Pastry </a>
-                <a href="{% url 'courses' %}?category=cakes" class="dropdown-item ">Cakes </a>
-                <a href="{% url 'courses' %}?category=breads" class="dropdown-item ">Breads </a>
-                <a href="{% url 'courses' %}" class="dropdown-item"><strong>All Courses</strong></a>
+                <a href="{% url 'courses' %}?subcategory=Pastry" class="dropdown-item">Pastry </a>
+                <a href="{% url 'courses' %}?subcategory=Cakes" class="dropdown-item ">Cakes </a>
+                <a href="{% url 'courses' %}?subcategory=Bread" class="dropdown-item ">Breads </a>
+                <a href="{% url 'courses' %}?category=Baking Courses" class="dropdown-item"><strong>All Courses</strong></a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav_title nav-link mr-5" href="{% url 'gifts' %}" id="gifts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="nav_title nav-link mr-5" href="{% url 'courses' %}?category=Gift Card" id="gifts">
                 Gift Vouchers
             </a>
-            <div class="dropdown-menu" aria-labelledby="all-courses-link">
-                <a href="{% url 'gifts' %}?category=Birthday" class="dropdown-item">Birthday </a>
-                <a href="{% url 'gifts' %}?category=Congratulations" class="dropdown-item ">Congratulations </a>
-                <a href="{% url 'gifts' %}?category=Thank You" class="dropdown-item ">Thank you </a>
-                <a href="{% url 'gifts' %}?category=Wedding" class="dropdown-item ">Wedding </a>
-                <a href="{% url 'gifts' %}?category=Custom" class="dropdown-item ">Custom </a>
-                <a href="{% url 'gifts' %}" class="dropdown-item"><strong>All Gifts Vouchers</strong></a>
-            </div>
         </li>
 
         <li class="nav-item dropdown">

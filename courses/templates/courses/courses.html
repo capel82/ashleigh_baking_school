@@ -3,33 +3,21 @@
 
 {% block content %}
 
-<div class="container-fluid p-0">
-    <div class="jumbotron jumbotron-courses"> 
-        <div class="overlay mx-auto p-5 text-center">
-            <p class="display-4 jumbotron_shoutout">Baking Courses</p>
-            <hr class="my-4">
-            <ul class="jumbotron_descriptions">
-            <li><i class="fas fa-check mx-2"></i>Short evenings and weekends courses</li>
-            <li><i class="fas fa-check mx-2"></i> Small group of maximum of 8 students</li>
-            <li><i class="fas fa-check mx-2"></i>Suitable for beginner and intermediate level</li>
-            <li><i class="fas fa-check mx-2"></i> From age 18 to 99. All are welcome to learn.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<div class="overlay"></div>
 <div class="container">
-    <div class="row text-center mt-2">
+    <div class="row text-center mt-5">
         <div class="col-md-12">
             <h2>Filtered by Category: </h2>
         </div>
     </div>
     <div class="row text-center">
         <div class="col-md-12 pb-5">
-            <a href="{% url 'courses' %}" class="btn btn-secondary btn-lg filter_button" role="button" aria-disabled="true">All</a>
-            <a href="{% url 'courses' %}?category=pastry" class="btn btn-secondary btn-lg filter_button" role="button" aria-disabled="true">Pastry</a>
-            <a href="{% url 'courses' %}?category=cakes" class="btn btn-secondary btn-lg filter_button" role="button" aria-disabled="true">Cakes</a>
-            <a href="{% url 'courses' %}?category=breads" class="btn btn-secondary btn-lg filter_button" role="button" aria-disabled="true">Breads</a>
+            <a href="{% url 'courses' %}?category=Baking Courses" class="btn btn-lg filter_button" role="button" aria-disabled="true">All</a>
+            <a href="{% url 'courses' %}?subcategory=Pastry" class="btn  btn-lg filter_button" role="button" aria-disabled="true">Pastry</a>
+            <a href="{% url 'courses' %}?subcategory=Cakes" class="btn btn-lg filter_button" role="button" aria-disabled="true">Cakes</a>
+            <a href="{% url 'courses' %}?subcategory=Bread" class="btn  btn-lg filter_button" role="button" aria-disabled="true">Breads</a>
+            <a href="{% url 'courses' %}?category=Gift Card" class="btn  btn-lg filter_button" role="button" aria-disabled="true">Gift Cards</a>
+            
         </div>
     </div>
     <div class="row mx-lg-n5">
@@ -40,10 +28,11 @@
                 <img class="card-img-top" src="{{ course.photo_course.url }}"  alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-header">{{course.title}}</h5>
-                    <h5 class="text-info pt-2">{{course.category}}</h5>
+                    <h5 class="text-info pt-2">{{course.subcategory}}</h5>
                 </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">{{course.weekends_datetime|date:"d F yy h:i a"}}<br>{{course.day}}</li>
+                        <li class="list-group-item p-1">{{course.course_datetime|date:"d F yy h:i a"}}<br>{{course.day}}</li>
+                        <li class="list-group-item p-2 text-dark">Euro {{course.price}}</li>
                     </ul>
                 <div class="card-body">
                     <a class="btn btn-info" href="{% url 'course' course.id %}" role="button">More Info</a>

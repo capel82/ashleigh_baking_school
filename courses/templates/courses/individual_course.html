@@ -10,10 +10,12 @@
     </div>
     <div class="row text-center">
         <div class="col-md-12 pb-5">
-            <a href="{% url 'courses' %}" class="btn btn-secondary filter_button" role="button" aria-disabled="true">All</a>
-            <a href="{% url 'courses' %}?category=pastry" class="btn btn-secondary  filter_button" role="button" aria-disabled="true">Pastry</a>
-            <a href="{% url 'courses' %}?category=cakes" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Cakes</a>
-            <a href="{% url 'courses' %}?category=breads" class="btn btn-secondary filter_button" role="button" aria-disabled="true">Breads</a>
+            <a href="{% url 'courses' %}?category=Baking Courses" class="btn filter_button" role="button" aria-disabled="true">All</a>
+            <a href="{% url 'courses' %}?subcategory=Pastry" class="btn filter_button" role="button" aria-disabled="true">Pastry</a>
+            <a href="{% url 'courses' %}?subcategory=Cakes" class="btn filter_button" role="button" aria-disabled="true">Cakes</a>
+            <a href="{% url 'courses' %}?subcategory=Breads" class="btn filter_button" role="button" aria-disabled="true">Breads</a>
+            <a href="{% url 'courses' %}?category=Gift Card" class="btn filter_button" role="button" aria-disabled="true">Gift Cards</a>
+            
         </div>
     </div>
     <div class="row p-2 my-3">
@@ -26,28 +28,29 @@
                 <p class="single_title">{{course.title}}</p>
                 </div>
             </div>
-
+           
             <div class="row courses_descriptions p-4">
                 <div class=" col-sm-6 col-md-6 col-lg-6">
-                    <h5> What you will learn:</h5>
+                    <h5>{{course.description1}}</h5>
                     <ul class="courses_lists">
-                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list1}}</li>
-                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list2}}</li>
-                        <li><i class="fas fa-mitten mx-2"></i>{{course.learn_list3}}</li>
+                        <li>{{course.learn_list1}}</li>
+                        <li>{{course.learn_list2}}</li>
+                        <li>{{course.learn_list3}}</li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6">
-                    <h5>What you will bring back:</h5>
+                    <h5>{{course.description2}}</h5>
                     <ul class="courses_lists">
-                        <li><i class="fas fa-check mx-2"></i>{{course.completion_list1}}.</li>
-                        <li><i class="fas fa-check mx-2"></i>{{course.completion_list2}}</li>
+                        <li>{{course.completion_list1}}.</li>
+                        <li>{{course.completion_list2}}</li>
                     </ul>
                 </div>
             </div>
+          
             <div class="row courses_date">
                 <div class="col-sm-12 col-md-12  weekends">
                     <div class="row text-center justify-content-center">
-                        <p><strong>Saturday<br> {{course.weekends_datetime|date:"d F yy h:i a"}}<br>Euro {{course.price}}</strong></p>
+                        <p><strong>{{course.day}}<br> {{course.course_datetime|date:"d F yy h:i a"}}<br>Euro {{course.price}}</strong></p>
                 </div>
                     <div class="row d-flex justify-content-center">
                         <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">

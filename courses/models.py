@@ -1,10 +1,13 @@
 from django.db import models
 from datetime import datetime
 
+from about.models import Team
+
 # Create your models here.
 class Course(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     subcategory = models.ForeignKey('Subcategory', null=True, blank=True, on_delete=models.SET_NULL)
+    team = models.ForeignKey('about.Team', null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length =50)
     description1 = models.CharField(max_length=200, blank=True)
     learn_list1 = models.CharField(max_length=250, blank=True)
@@ -21,6 +24,7 @@ class Course(models.Model):
     price = models.IntegerField()
     def __str__(self):
         return self.title
+
 
 class Category(models.Model):
 

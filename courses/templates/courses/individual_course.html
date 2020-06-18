@@ -46,6 +46,22 @@
                     </ul>
                 </div>
             </div>
+            <div class ="row p-4">
+                <div class="col">
+                    {% if course.team.image %}
+                     <div class="chip">
+                        <img src="{{ course.team.image.url }}" alt="Chef" width="96" height="96">
+                        {{course.team.name}}
+                    </div> 
+                    {% else %}
+                    <div class="pl-4 text-muted">
+                        <p><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            Gift card can be redemeed for any courses
+                        </p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
           
             <div class="row courses_date">
                 <div class="col-sm-12 col-md-12  weekends">

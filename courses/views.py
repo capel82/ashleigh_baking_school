@@ -24,7 +24,7 @@ def all_courses(request):
                 subcategories = SubCategory.objects.filter(title__in=subcategories)
 
 
-    paginator = Paginator (courses, 6)
+    paginator = Paginator (courses, 8)
     page = request.GET.get('page')
 
     paged_courses = paginator.get_page(page)
@@ -34,13 +34,13 @@ def all_courses(request):
         'current_categories': category,
         'current_subcategories': subcategory,
     }
+
     return render(request, 'courses/courses.html', context)
 
 def course(request, course_id):
 
     course = get_object_or_404(Course, pk=course_id)
     
-
     content = {
         'course': course,
     }

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from courses. models import Course
@@ -25,6 +25,21 @@ def add_to_bag(request, item_id):
 
         request.session['basket'] = basket
     return redirect(redirect_url)
+
+def update_basket(request, item_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+    else:
+            basket.pop(item_id)
+
+    request.session['basket'] = basket
+
+    return redirect(reverse('view_basket'))
 
 def remove(request, item_id):
     course = Course.objects.get(pk=item_id)

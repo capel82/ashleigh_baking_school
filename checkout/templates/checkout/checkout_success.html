@@ -24,7 +24,8 @@
             <div class="row pl-2">
                     <div class= "col-12 col-md-8">
                         <p class="text-info">Order Number: {{order.order_number}}</p>
-                        <p clas="mt-0">Order Date: {{order.date|date:"d F yy h:i a"}} </p>
+                        <p class="mt-0">Order Date: {{order.date|date:"d F yy h:i a"}} </p>
+                        <p>Personal Message: {{order.message}}</p>
                     </div>
             </div>
 
@@ -41,7 +42,8 @@
                         <tbody>
                         {% for item in order.lineitems.all %}
                             <tr>
-                                <td><strong>{{item.course.title}}</strong><br> {{item.course.weekends_datetime|date:"d F yy h:i a"}}</td>
+                                <td><strong>{{item.course.title}}<br>{{item.course.category}}</strong>
+                                <br> {{item.course.course_datetime|date:"d F yy h:i a"}}</td>
                                 <td>{{item.quantity}}</td>
                                 <td>{{item.course.price}}</td>
                             </tr>

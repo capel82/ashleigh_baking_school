@@ -70,8 +70,8 @@ def checkout(request):
                         order_line_item.save()
                 except Course.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
+                        "One of the items in your basket wasn't found in our database. "
+                        "Please contact us!")
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))

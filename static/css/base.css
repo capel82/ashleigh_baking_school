@@ -1,6 +1,7 @@
 html {
     height: 100%;
 }
+
 /*--REUSABLE CSS --*/
 h1, h2, h3 {
     color: #4f4f4f;
@@ -23,6 +24,15 @@ div .card {
 .dropdown a:hover {
     background-color: #91ACC0;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+/*--allauth templates--*/
+ .account_allauth_container {
+     margin-top: 150px;
+     margin-bottom: 100px;
+ }
 /*--footer--*/
 #footer-details {
     background-color: #525975;
@@ -356,10 +366,7 @@ div .card {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
-.page-item {
-    background-color: #4f4f4f;
-    color:#000;
-}
+.
 /*--aligning cards to be more centered in devices from iphone6 to iphoneX--*/
 @media (min-width: 375px) and (max-width: 767px) {
     .card {
@@ -505,10 +512,7 @@ div .card {
     font-family: 'Playfair Display', serif;
     color:#525975;
 }
-/*--allauth templates--*/
-.allauth_container {
-    margin-top:150px;
-}
+
 /*--contact.html--*/
 .jumbotron-contact {
     background-image:url("/static/img/contact.jpg");

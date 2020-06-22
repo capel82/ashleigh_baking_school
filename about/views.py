@@ -14,3 +14,7 @@ def team(request):
 def kitchen(request):
 
     return render(request, 'about/kitchen.html')
+
+def faqs(request):
+
+    return render(request, 'about/faqs.html')

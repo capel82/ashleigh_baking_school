@@ -21,7 +21,7 @@ div .card {
     height: 1rem;
     width:1rem;
 }
-.dropdown a:hover {
+.nav-item:hover {
     background-color: #91ACC0;
 }
 .dropdown:hover .dropdown-menu {

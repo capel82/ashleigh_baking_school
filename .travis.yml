@@ -1,0 +1,10 @@
+
+language: python 
+
+python: "3.8.2"
+
+install:
+- pip install Django==3.0.7
+
+script:
+-python runtest.py

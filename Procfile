@@ -1,0 +1,1 @@
+web: gunicorn abs_baking.wsgi:application

@@ -84,14 +84,10 @@ div .card {
   }
 }
 /* --bootstrap toasts: taken and adjusted from Christ Z video */
-.message-container {
-    position: fixed;
-    top: 68px;
-    right: 15px;
-    z-index: 99999999999;
-}
+
 .custom-toast {
     overflow: visible;
+    width:40px;
 }
 
 /*--INDEX.HTML--*/

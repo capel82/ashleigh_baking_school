@@ -66,14 +66,15 @@
         </div>
         {% endif %}
     </div>
- <!--pagination: dissapear when courses less or equal to 6, next and previous arrow diasabled as required-->
+ <!--pagination-->
     <div class= 'row my-4'>
         <div class = 'col-md-12 d-flex justify-content-center'>
             {% if courses.has_other_pages %}
             <ul class= "pagination">
                 {% if courses.has_previous %}
                     <li class="page-item">
-                        <a href="?page={{courses.previous_page_number}}" class="page-link text-dark">&laquo;</a>
+                        <a href="?page={{courses.previous_page_number}}" 
+                        class="page-link text-dark">&laquo;</a>
                     </li>
                 {% else %}
                     <li class="page-item disabled">

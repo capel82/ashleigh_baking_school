@@ -20,7 +20,6 @@
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col">Items Info</th>
-                                    <th scope="col">Price(Euro)</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
@@ -29,14 +28,11 @@
                             {% for item in basket_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img_basket img-fluid rounded" src="{{ item.course.photo_course.url }}">
+                                        <img class="img_basket img-fluid rounded" src="{{ item.course.photo_course.url }}" alt="Responsive Image">
                                     </td>
-                                    <td class="py-2"><strong>{{item.course.title}}</strong><br>{{item.course.subcategory}}<br>{{item.course.course_datetime|date:"d F yy h:i a"}}</td>
-                
-                                    <td class="py-2 ">
-                                       € {{ item.course.price }}
-                
-                                    </td>
+                                    <td class="py-2"><strong>{{item.course.title}}</strong><br>{{item.course.subcategory}}
+                                    <br>{{item.course.course_datetime|date:"d F yy h:i a"}}<br>€ {{ item.course.price }}</td>
+            
                                     <td class="py-2 text-center">
                                          <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
                                             {% csrf_token %}
@@ -67,7 +63,7 @@
                                             </div>
                                         </form>
                                         </div>
-                                        <a class="update-link btn btn-outline-info btn-sm"><small>Update</small></a>
+                                        <a class="update-link btn btn-outline-dark btn-sm"><small>Update</small></a>
                                        
                                     </td>
                                     <td class="py-3 ">
@@ -83,13 +79,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'courses' %}" class="btn btn-outline-dark btn-lg">
-                                        <span class="icon">
+                                    <a href="{% url 'courses' %}" class="btn btn-outline-dark">
+                                        <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase">Continue Browsing</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-dark btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-dark">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -100,12 +96,12 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
+                    <p class="lead my-5">Your bag is empty.</p>
+                    <a href="{% url 'courses' %}" class="btn btn-outline-dark">
+                        <span>
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase">Continue Browsing</span>
                     </a>
                 {% endif %}
             </div>

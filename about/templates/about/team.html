@@ -24,10 +24,15 @@
         {% for team in teams %}
         <div class="col-md-6 text-center px-5">
             <h4 class="chef-name">{{team.name}}</h4>
-            <img class="img-chef card-img-top img-fluid img-thumbnail rounded-circle" src="{{ team.image.url }}" alt="Card image cap">
+            <img class="img-chef card-img-top img-fluid img-thumbnail rounded-circle" src="{{ team.image.url }}" alt="Responsive image">
             <p class="item-intro"> {{team.description}}</p>
         </div>
          {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col text-center my-3">
+            <a href="{% url 'kitchen' %}" class="btn btn-dark">Have A Look At Our Kitchen</a>
+        </div>
     </div>
 </div>
 

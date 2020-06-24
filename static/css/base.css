@@ -13,13 +13,21 @@ h4,h5 {
 div .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size:20px;
+    }
+}
 /*--header and navbar--*/
 #header-container {
     background-color:#525975;
 }
 .account-icons {
-    height: 1rem;
-    width:1rem;
+    height:16 px;
+    width:16 px;
 }
 .nav-item:hover {
     background-color: #91ACC0;
@@ -63,12 +71,19 @@ div .card {
     border-bottom:0;
     border-top: solid 3px #525975;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    min-width:8rem;
-    margin:.225rem 0 0;
+    min-width:120px;
+    margin:4px 0 0;
 }
-
-/* --bootstrap toasts */
-
+@media only screen and (max-width: 768px) {
+    .social_titles p {
+        font-size:22px;
+    }
+    address {
+        font-size: 14px;
+    }
+  }
+}
+/* --bootstrap toasts: taken and adjusted from Christ Z video */
 .message-container {
     position: fixed;
     top: 68px;
@@ -118,44 +133,30 @@ div .card {
     font-family: 'Playfair Display', serif;
 }
 @media only screen and (max-width: 768px) {
-    .jumbotron {
-    background-image:url("/static/img/churros.jpg");
-    background-position:center;
-    background-attachment: fixed;
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    min-height: 45vh;
-    margin-top: 0;
-}
-    .overlay {
-    height:50%;
-    width:80%;
-    background-color: rgba(255, 255, 255, 0.8);
-    align-items:center;
-    vertical-align: bottom;
-    margin-top: 220px;
-}
-.jumbotron_shoutout{
-    color:#000;
-    font-weight: 500;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size:25px;
-    margin-bottom:10px;
-    
-}
-#school_intro {
-    color: #000;
-    font-family: 'Playfair Display', serif;
-    font-weight:400;
-    font-size:15px;
+        .jumbotron {
+        min-height: 45vh;
+    }
+        .overlay {
+        height:50%;
+        width:80%;
+        margin-top: 200px;
+    }
+    .jumbotron_shoutout{
+        font-size:35px;
+        
+    }
+    #school_intro {
+        font-size:18px;
+    }
+
+    .intro_messages {
+        font-size: 13px;
+    }
+    .browse_button {
+        font-size:10px;
+    }
 }
 
-.intro_messages {
-    font-size: 12px;
-    font-family: 'Playfair Display', serif;
-}
-}
 #announcement {
     background-color: #91ACC0;
     color: #fff;
@@ -172,7 +173,11 @@ div .card {
     color: #91ACC0;
     background-color: #fff;
 }
-
+@media only screen and (max-width: 768px){
+    #next_event_anchor{
+        font-size:18px;
+    } 
+}
 /*--students feebback--*/
 .comments {
     font-family: 'Playfair Display', serif;
@@ -183,7 +188,7 @@ div .card {
 }
 
 /*--COURSES.HTML--*/
-.slanted-div-1{
+.slanted-div-1 {
       position: relative;
       width: 100%;
       height: 250px;
@@ -196,7 +201,7 @@ div .card {
       margin-top: 50px;
     }
 
-    .slanted-div-1:after{
+    .slanted-div-1:after {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -212,7 +217,7 @@ div .card {
     }
 
 
-.slanted-div-2{
+.slanted-div-2 {
       position: relative;
       width: 100%;
       height: 250px;
@@ -225,7 +230,7 @@ div .card {
       z-index:1;
     }
 
-    .slanted-div-2:after{
+    .slanted-div-2:after {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -366,8 +371,7 @@ div .card {
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
-.
-/*--aligning cards to be more centered in devices from iphone6 to iphoneX--*/
+/*--aligning product cards to be more centered in devices from iphone6 to iphoneX--*/
 @media (min-width: 375px) and (max-width: 767px) {
     .card {
         margin-left:25px;
@@ -410,7 +414,7 @@ div .card {
     padding-bottom:30px;
     margin: 0 20px 20px 0;
 }
-
+/* -- codes taken and adjusted from W3 school(Contact Chip)--*/
 .chip {
   display: inline-block;
   padding: 0 25px;
@@ -432,7 +436,7 @@ div .card {
 .add_basket {
     background-color:#BB5978;
 }
-@media (max-width: 575.98px) { 
+@media (max-width: 576px) { 
     .course_container {
     margin-top:150px;
     }
@@ -450,6 +454,9 @@ div .card {
     width:325px;
     height:325px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.continue_shopping_button{
+    font-size:10px;
 }
 }
 @media (min-width: 767px) and (max-width: 1200px){ 
@@ -473,11 +480,8 @@ div .card {
 }
 }
 /*--BASKET.HTML--*/
-.basket_img {
-    width:50px;
-}
 .basket_container {
-    margin-top:130px;
+    margin-top:150px;
     padding:30px;
     background-color: #eff3f6;
 }
@@ -490,7 +494,18 @@ div .card {
     margin-right: 10px;
     margin-top: 10px;
 }
+thead {
+    background-color: #4f4f4f;
+}
 
+th {
+    color: #fff;
+}
+@media (max-width: 576px) { 
+    td {
+        font-size:12px;
+    }
+}
 /*--CHECKOUT.html--*/
 .checkout_container {
     margin-top: 150px;
@@ -512,8 +527,53 @@ div .card {
     font-family: 'Playfair Display', serif;
     color:#525975;
 }
+/*--TEAM.HTML--*/
+.jumbotron-team {
+    background-image:url("/static/img/strawberry.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 80vh;
+    margin-top: 0;
+}
+.img-chef {
+    height:300px;
+    width:300px;
+    margin-bottom:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.chef-name {
+    margin:20px;
+    font-family: 'san serif', serif;
+}
+.jumbotron_descriptions {
+    list-style: none;
+    font-size:20px;
+    font-family: 'san serif', serif;
+    font-style:italic;
+    line-height: 1.5em;
+    padding:0;
+}
+@media (max-width: 576px) { 
+    .jumbotron_descriptions {
+        font-size:15px;
+    }
+    
+    .chef-name {
+        margin:16px;
+    }
+}
+/*--KITCHEN.html--*/
+.img-kitchen {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item-intro {
+    font-size:20px;
+    font-family: 'san serif', serif;
 
-/*--contact.html--*/
+}
+/*--CONTACT.html--*/
 .jumbotron-contact {
     background-image:url("/static/img/contact.jpg");
     background-position:center;
@@ -528,12 +588,18 @@ div .card {
     padding: 20px 0px;
     font-family: 'Playfair Display', cursive;
 }
+@media (max-width: 576px) { 
+    .contact_left, .contact_right{
+    margin: 15px 25px;
+    padding: 20px 0px;
+    }
+
+}
 
 .contact_left p {
     color: #4f4f4f;
     margin-bottom:10px;
 }
-
 
 #make_inquiry{
     background-color: #91ACC0;
@@ -554,47 +620,13 @@ form {
     background-color: #91ACC0;
 }
 
-.jumbotron-team {
-    background-image:url("/static/img/strawberry.jpg");
-    background-position:center;
-    background-attachment: fixed;
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    min-height: 80vh;
-    margin-top: 0;
-}
-.img-chef {
-    height:350px;
-    width:350px;
-    margin-bottom:30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.chef-name {
-    margin:20px;
-    font-family: 'san serif', serif;
-}
-.img-kitchen {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.item-intro {
-    font-size:20px;
-    font-family: 'san serif', serif;
-
+.color{
+    color:green;
 }
 
-
-thead {
-    background-color: #4f4f4f;
-}
-
-th {
-    color: #fff;
-}
 
 /*--FAQs.html--*/
 .card_header_qs {
     background-color: #91ACC0;
 }
-
-
 

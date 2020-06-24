@@ -11,18 +11,18 @@
             <p id="school_intro">Do you want to learn a new skill or upskill?</p>
             <p class="intro_messages">We have short baking courses that run weekdays and weekends to suit your busy life.</p> 
             <p class="intro_messages font-italic font-weight-bold">It is never too late to learn and get started!</p>
-            <a href="{% url 'courses' %}?category=Baking Courses" class= "btn btn-dark">BROWSE COURSES</a>
+            <a href="{% url 'courses' %}?category=Baking Courses" class= "btn btn-dark browse_button">BROWSE COURSES</a>
         </div>
     </div>
 </div>
 <div id="announcement" class="container-fluid">
     <div class=" col-md-12 text-center">
         <h2 class="pt-4">Next Baking Course </h2>
+        <!--displaying course that 'is_next_event' from the database-->
         {% if courses %}
             {% for course in courses %}
                 <h4 class="pb-2">{{course.course_datetime|date:"d F yy h:i a"}} </h4>
                 <a id="next_event_anchor" class="btn btn-lg mb-4" href="{% url 'course' course.id %}" role="button">{{course.title}}</a>
-               
             {% endfor %}
         {% else %}
         <div class="col-md-12 pb-3">

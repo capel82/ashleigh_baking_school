@@ -42,10 +42,10 @@
                         <tbody>
                         {% for item in order.lineitems.all %}
                             <tr>
-                                <td><strong>{{item.course.title}}<br>{{item.course.category}}</strong>
+                                <td><strong>{{item.course.title}}<br>{{item.course.category}}<br>Euro {{item.course.price}}</strong>
                                 <br> {{item.course.course_datetime|date:"d F yy h:i a"}}</td>
                                 <td>{{item.quantity}}</td>
-                                <td>{{item.course.price}}</td>
+                                <td>{{order.grand_total}}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

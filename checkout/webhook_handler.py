@@ -7,7 +7,6 @@ from .models import Order, OrderLineItem
 from courses.models import Course
 from profiles.models import UserProfile
 
-import json
 import time
 
 class StripeWH_Handler:

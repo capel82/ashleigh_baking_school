@@ -70,7 +70,7 @@
                 </div>
                     <div class="row">
                         <div class="col-sm-8 col-md-12 d-flex justify-content-center">
-                        <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
+                        <form class="form" action="{% url 'add_to_bag' course.id 'course' %}" method="POST">
                         {% csrf_token %}
                             <div class="form-row form-inline">
                                     <div class="input-group">

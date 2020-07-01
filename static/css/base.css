@@ -29,7 +29,6 @@ div .card {
     height:16 px;
     width:16 px;
 }
-
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -56,7 +55,16 @@ div .card {
     font-size: 25px;
     padding:0;
 }
-
+@media only screen and (max-width: 768px) {
+    .social_titles p {
+        font-size:22px;
+    }
+    address {
+        font-size: 14px;
+    }
+  }
+}
+/*--navbar--*/
 .nav_title{
     font-family: 'Playfair Display', serif;
     font-size: 18px;
@@ -68,21 +76,12 @@ div .card {
     border-left:0;
     border-bottom:0;
     border-top: solid 3px #525975;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
     min-width:120px;
     margin:4px 0 0;
 }
-@media only screen and (max-width: 768px) {
-    .social_titles p {
-        font-size:22px;
-    }
-    address {
-        font-size: 14px;
-    }
-  }
-}
-/* --bootstrap toasts: taken and adjusted from Christ Z video */
 
+/* --bootstrap toasts: taken and adjusted from Christ Z video */
 .custom-toast {
     overflow: visible;
 }
@@ -102,29 +101,24 @@ div .card {
 .overlay {
     height:70%;
     width:60%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     align-items:center;
     vertical-align: central;
     margin-top: 100px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
 }
 .jumbotron_shoutout{
-    color:#000;
     font-weight: 500;
-    font-family: 'Playfair Display', serif;
     font-size:60px;
     font-style:italic;
-
 }
 #school_intro {
-    color: #000;
-    font-family: 'Playfair Display', serif;
     font-weight:400;
     font-size:25px;
 }
-
 .intro_messages {
     font-size: 20px;
-    font-family: 'Playfair Display', serif;
 }
 @media only screen and (max-width: 768px) {
         .jumbotron {
@@ -154,6 +148,7 @@ div .card {
 #announcement {
     background-color: #91ACC0;
     color: #fff;
+    padding: 40px;
 }
 #announcement h2 {
     color:#fff;
@@ -182,184 +177,17 @@ div .card {
 }
 
 /*--COURSES.HTML--*/
-.slanted-div-1 {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      background-color: rgba(255, 255, 255, 1.0);
-      box-sizing: border-box;
-      padding: 30px;
-      color: #000;
-      margin-bottom: 200px;
-      z-index:1;
-      margin-top: 50px;
-    }
-
-    .slanted-div-1:after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top left;
-      transform: skewY(4deg);
-    }
-
-
-.slanted-div-2 {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      background: #000;;
-      box-sizing: border-box;
-      padding: 30px;
-      color: #fff;
-      margin-bottom: 200px;
-      margin-top:50px;
-      z-index:1;
-    }
-
-    .slanted-div-2:after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top right;
-      transform: skewY(-4deg);
-    }
-
-.products_container_fluid {
+.jumbotron-courses {
     background-image:url("/static/img/baking.jpg");
+    background-position:center;
     background-attachment: fixed;
-    min-height:48vh;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 45vh;
+    margin-top: 0;
+    padding:0;
 }
-@media only screen and (max-width:576px){
-    h2 {
-        font-size: 1.4rem;
-    }
-    p {
-        font-size: 14px;
-    }
-    .slanted-div-1{
-      position: relative;
-      width: 100%;
-      min-height: 240px;
-      background-color: rgba(255, 255, 255, 1.0);
-      box-sizing: border-box;
-      padding: 10px;
-      color: #000;
-      margin-bottom: 40px;
-      z-index:1;
-    }
 
-    .slanted-div-1:after{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top left;
-      transform: skewY(4deg);
-    }
-    .slanted-div-2{
-      position: relative;
-      width: 100%;
-      min-height: 240px;
-      background: #000;;
-      box-sizing: border-box;
-      padding: 10px;
-      color: #fff;
-      z-index:1;
-      margin:0;
-    }
-
-    .slanted-div-2:after{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top left;
-      transform: skewY(4deg);
-    }
-
-}
-@media only screen and (max-width: 768px) {
-.slanted-div-1{
-      position: relative;
-      width: 100%;
-      height: 180px;
-      background-color: rgba(255, 255, 255, 1.0);
-      box-sizing: border-box;
-      padding: 10px;
-      color: #000;
-      margin:0;
-      z-index:1;
-    }
-
-    .slanted-div-1:after{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top left;
-      transform: skewY(4deg);
-    }
-.slanted-div-2{
-      position: relative;
-      width: 100%;
-      height: 180px;
-      background: #000;;
-      box-sizing: border-box;
-      padding: 10px;
-      color: #fff;
-      z-index:1;
-      margin:0;
-    }
-
-    .slanted-div-2:after{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: inherit;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transform-origin: top left;
-      transform: skewY(4deg);
-    }
-
-}
 
 .list-group-item {
     font-weight: bold;
@@ -391,7 +219,11 @@ div .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .courses_descriptions {
-    margin: 0 10px 20px 0;
+    margin: 0 ;
+}
+.gift_description {
+    font-family: 'Playfair Display', serif;
+    color: #4f4f4f;
 }
 .courses_lists {
     list-style: none;
@@ -528,7 +360,7 @@ th {
     background-attachment: fixed;
     -webkit-background-size:cover;
     -moz-background-size: cover;
-    min-height: 80vh;
+    min-height: 45vh;
     margin-top: 0;
 }
 .img-chef {
@@ -565,6 +397,7 @@ th {
 .item-intro {
     font-size:20px;
     font-family: 'san serif', serif;
+    color:#4f4f4f;
 
 }
 /*--CONTACT.html--*/
@@ -574,9 +407,10 @@ th {
     background-attachment: fixed;
     -webkit-background-size:cover;
     -moz-background-size: cover;
-    min-height: 75vh;
+    min-height: 45vh;
     margin-top: 0;
 }
+
 .contact_left, .contact_right{
     margin: 35px 0px;
     padding: 20px 0px;

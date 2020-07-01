@@ -2,7 +2,14 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid  bg-light course_container">
+<div class="container course_container">
+    <div class="row mt-5">
+        <div class="col text-center">
+            <hr>
+            <h2>{{course.category}}</h2>
+            <hr>
+        </div>
+    </div>
     <div class="row text-center mt-5">
         <div class="col-md-12">
             <h3>Filtered by Category: </h3>
@@ -10,7 +17,7 @@
     </div>
     <div class="row text-center">
         <div class="col-md-12 pb-5">
-            <a href="{% url 'courses' %}?category=Baking Courses" class="btn filter_button" role="button" aria-disabled="true">All</a>
+            <a href="{% url 'courses' %}?category=Baking Course" class="btn filter_button" role="button" aria-disabled="true">All</a>
             <a href="{% url 'courses' %}?subcategory=Pastry" class="btn filter_button" role="button" aria-disabled="true">Pastry</a>
             <a href="{% url 'courses' %}?subcategory=Cakes" class="btn filter_button" role="button" aria-disabled="true">Cakes</a>
             <a href="{% url 'courses' %}?subcategory=Breads" class="btn filter_button" role="button" aria-disabled="true">Breads</a>
@@ -29,7 +36,7 @@
                 </div>
             </div>
            
-            <div class="row courses_descriptions p-4">
+            <div class="row courses_descriptions pt-2">
                 <div class=" col-sm-6 col-md-6 col-lg-6">
                     <h5>{{course.description1}}</h5>
                     <ul class="courses_lists">
@@ -41,12 +48,12 @@
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <h5>{{course.description2}}</h5>
                     <ul class="courses_lists">
-                        <li>{{course.completion_list1}}.</li>
+                        <li>{{course.completion_list1}}</li>
                         <li>{{course.completion_list2}}</li>
                     </ul>
                 </div>
             </div>
-            <div class ="row p-4">
+            <div class ="row d-flex text-center">
                 <div class="col">
                     {% if course.team.image %}
                      <div class="chip">
@@ -54,9 +61,15 @@
                         {{course.team.name}}
                     </div> 
                     {% else %}
-                    <div class="pl-4 text-muted">
+                    <div class="gift_description">
                         <p><i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            Gift card can be redemeed for any courses
+                            Gift card can be redeemed for any courses
+                        </p>
+                        <p><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            FREE DELIVERY through Ireland.
+                        </p>
+                        <p><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            Valid for 5 years.
                         </p>
                     </div>
                     {% endif %}
@@ -70,7 +83,7 @@
                 </div>
                     <div class="row">
                         <div class="col-sm-8 col-md-12 d-flex justify-content-center">
-                        <form class="form" action="{% url 'add_to_bag' course.id 'course' %}" method="POST">
+                        <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                         {% csrf_token %}
                             <div class="form-row form-inline">
                                     <div class="input-group">

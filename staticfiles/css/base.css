@@ -1,0 +1,626 @@
+html {
+    height: 100%;
+}
+
+/*--REUSABLE CSS --*/
+h1, h2, h3 {
+    color: #4f4f4f;
+    font-family: 'Playfair Display', serif;
+}
+h4,h5 {
+    font-family: 'Playfair Display', serif;
+}
+div .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size:20px;
+    }
+}
+/*--header and navbar--*/
+#header-container {
+    background-color:#525975;
+}
+.account-icons {
+    height:16 px;
+    width:16 px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+/*--allauth templates--*/
+ .account_allauth_container {
+     margin-top: 150px;
+     margin-bottom: 100px;
+ }
+/*--footer--*/
+#footer-details {
+    background-color: #525975;
+}
+
+.footer-icons p {
+    color:#fff;
+}
+.footer-icons i:hover {
+    color:#ffc107!important;
+}
+.social_titles {
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 25px;
+    padding:0;
+}
+
+.nav_title{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropdown-menu{
+    background-color: #dfe6ec;
+    border-right: 0;
+    border-left:0;
+    border-bottom:0;
+    border-top: solid 3px #525975;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width:120px;
+    margin:4px 0 0;
+}
+@media only screen and (max-width: 768px) {
+    .social_titles p {
+        font-size:22px;
+    }
+    address {
+        font-size: 14px;
+    }
+  }
+}
+/* --bootstrap toasts: taken and adjusted from Christ Z video */
+
+.custom-toast {
+    overflow: visible;
+}
+
+/*--INDEX.HTML--*/
+.jumbotron {
+    background-image:url('/static/img/churros.jpg');
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 55vh;
+    margin-top: 0;
+    margin-bottom:0;
+}
+
+.overlay {
+    height:70%;
+    width:60%;
+    background-color: rgba(255, 255, 255, 0.3);
+    align-items:center;
+    vertical-align: central;
+    margin-top: 100px;
+}
+.jumbotron_shoutout{
+    color:#000;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    font-size:60px;
+    font-style:italic;
+
+}
+#school_intro {
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-weight:400;
+    font-size:25px;
+}
+
+.intro_messages {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+@media only screen and (max-width: 768px) {
+        .jumbotron {
+        min-height: 45vh;
+    }
+        .overlay {
+        height:50%;
+        width:80%;
+        margin-top: 200px;
+    }
+    .jumbotron_shoutout{
+        font-size:35px;
+        
+    }
+    #school_intro {
+        font-size:18px;
+    }
+
+    .intro_messages {
+        font-size: 13px;
+    }
+    .browse_button {
+        font-size:10px;
+    }
+}
+
+#announcement {
+    background-color: #91ACC0;
+    color: #fff;
+}
+#announcement h2 {
+    color:#fff;
+}
+#next_event_anchor{
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    border: solid 1px #fff;
+}
+#next_event_anchor:hover {
+    color: #91ACC0;
+    background-color: #fff;
+}
+@media only screen and (max-width: 768px){
+    #next_event_anchor{
+        font-size:18px;
+    } 
+}
+/*--students feebback--*/
+.comments {
+    font-family: 'Playfair Display', serif;
+}
+.ratings {
+    padding:0;
+    color: #ffd633;
+}
+
+/*--COURSES.HTML--*/
+.slanted-div-1 {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background-color: rgba(255, 255, 255, 1.0);
+      box-sizing: border-box;
+      padding: 30px;
+      color: #000;
+      margin-bottom: 200px;
+      z-index:1;
+      margin-top: 50px;
+    }
+
+    .slanted-div-1:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: skewY(4deg);
+    }
+
+
+.slanted-div-2 {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background: #000;;
+      box-sizing: border-box;
+      padding: 30px;
+      color: #fff;
+      margin-bottom: 200px;
+      margin-top:50px;
+      z-index:1;
+    }
+
+    .slanted-div-2:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top right;
+      transform: skewY(-4deg);
+    }
+
+.products_container_fluid {
+    background-image:url("/static/img/baking.jpg");
+    background-attachment: fixed;
+    min-height:48vh;
+}
+@media only screen and (max-width:576px){
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 14px;
+    }
+    .slanted-div-1{
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+      background-color: rgba(255, 255, 255, 1.0);
+      box-sizing: border-box;
+      padding: 10px;
+      color: #000;
+      margin-bottom: 40px;
+      z-index:1;
+    }
+
+    .slanted-div-1:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: skewY(4deg);
+    }
+    .slanted-div-2{
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+      background: #000;;
+      box-sizing: border-box;
+      padding: 10px;
+      color: #fff;
+      z-index:1;
+      margin:0;
+    }
+
+    .slanted-div-2:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: skewY(4deg);
+    }
+
+}
+@media only screen and (max-width: 768px) {
+.slanted-div-1{
+      position: relative;
+      width: 100%;
+      height: 180px;
+      background-color: rgba(255, 255, 255, 1.0);
+      box-sizing: border-box;
+      padding: 10px;
+      color: #000;
+      margin:0;
+      z-index:1;
+    }
+
+    .slanted-div-1:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: skewY(4deg);
+    }
+.slanted-div-2{
+      position: relative;
+      width: 100%;
+      height: 180px;
+      background: #000;;
+      box-sizing: border-box;
+      padding: 10px;
+      color: #fff;
+      z-index:1;
+      margin:0;
+    }
+
+    .slanted-div-2:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: skewY(4deg);
+    }
+
+}
+
+.list-group-item {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+/*--aligning product cards to be more centered in devices from iphone6 to iphoneX--*/
+@media (min-width: 375px) and (max-width: 767px) {
+    .card {
+        margin-left:25px;
+    }
+}
+/*--SINGLE COURSE.html --*/
+.course_container {
+    margin-top:100px;
+}
+
+.course_title {
+    background-color:#91ACC0;
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    
+}
+.img-courses{
+    width:450px;
+    height:450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.courses_descriptions {
+    margin: 0 10px 20px 0;
+}
+.courses_lists {
+    list-style: none;
+    padding:0;
+    margin:15px;
+    font-family: 'san serif', serif;
+    font-size:16px;
+}
+.courses_date {
+    font-family: 'san serif', serif;
+    font-size:18px;
+    background-color: #fff;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin: 0 20px 20px 0;
+}
+/* -- codes taken and adjusted from W3 school(Contact Chip)--*/
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  color: #4f4f4f;
+  background-color: #fff;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.add_basket {
+    background-color:#BB5978;
+}
+@media (max-width: 576px) { 
+    .course_container {
+    margin-top:150px;
+    }
+  .course_title {
+    background-color:#91ACC0;
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    text-align: center;
+    
+}
+.img-courses{
+    width:325px;
+    height:325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.continue_shopping_button{
+    font-size:10px;
+}
+}
+@media (min-width: 767px) and (max-width: 1200px){ 
+    .course_container {
+    margin-top:200px;
+    }
+  .course_title {
+    background-color:#91ACC0;
+    color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin:0;
+    padding-top:7px;
+    text-align: center;
+    
+}
+.img-courses{
+    width:450px;
+    height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+}
+/*--BASKET.HTML--*/
+.basket_container {
+    margin-top:150px;
+    padding:30px;
+    background-color: #eff3f6;
+}
+
+.filter_button {
+    background-color: #525975;
+    opacity:0.9;
+    color:#fff;
+    font-size:18px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+thead {
+    background-color: #4f4f4f;
+}
+
+th {
+    color: #fff;
+}
+@media (max-width: 576px) { 
+    td {
+        font-size:12px;
+    }
+}
+/*--CHECKOUT.html--*/
+.checkout_container {
+    margin-top: 150px;
+    padding-left:80px;
+    padding-right:80px;
+   
+}
+.checkout_container h1 {
+    padding:10px;
+    border-bottom: solid #4f4f4f 1px;
+}
+.fieldset-label {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.grand_total {
+    font-size: 20px;
+    font-weight:500;
+    font-family: 'Playfair Display', serif;
+    color:#525975;
+}
+/*--TEAM.HTML--*/
+.jumbotron-team {
+    background-image:url("/static/img/strawberry.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 80vh;
+    margin-top: 0;
+}
+.img-chef {
+    height:300px;
+    width:300px;
+    margin-bottom:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.chef-name {
+    margin:20px;
+    font-family: 'san serif', serif;
+}
+.jumbotron_descriptions {
+    list-style: none;
+    font-size:20px;
+    font-family: 'san serif', serif;
+    font-style:italic;
+    line-height: 1.5em;
+    padding:0;
+}
+@media (max-width: 576px) { 
+    .jumbotron_descriptions {
+        font-size:15px;
+    }
+    
+    .chef-name {
+        margin:16px;
+    }
+}
+/*--KITCHEN.html--*/
+.img-kitchen {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item-intro {
+    font-size:20px;
+    font-family: 'san serif', serif;
+
+}
+/*--CONTACT.html--*/
+.jumbotron-contact {
+    background-image:url("/static/img/contact.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    min-height: 75vh;
+    margin-top: 0;
+}
+.contact_left, .contact_right{
+    margin: 35px 0px;
+    padding: 20px 0px;
+    font-family: 'Playfair Display', cursive;
+}
+@media (max-width: 576px) { 
+    .contact_left, .contact_right{
+    margin: 15px 25px;
+    padding: 20px 0px;
+    }
+
+}
+
+.contact_left p {
+    color: #4f4f4f;
+    margin-bottom:10px;
+}
+
+#make_inquiry{
+    background-color: #91ACC0;
+
+}
+#make_inquiry:hover {
+    background-color:#fff;
+    border: solid 2px #91ACC0;
+    color:#91ACC0;
+}
+#inquiryLabel {
+    color:#91ACC0;
+}
+form {
+    text-align: left;
+}
+#send_message {
+    background-color: #91ACC0;
+}
+
+.color{
+    color:green;
+}
+
+
+/*--FAQs.html--*/
+.card_header_qs {
+    background-color: #91ACC0;
+}
+

@@ -21,6 +21,7 @@ if os.environ.get("DEVELOPMENT"):
     development = True
 else:
     development = False
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,7 +33,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'Development' in os.environ
+DEBUG = "Development" in os.environ
+
 
 ALLOWED_HOSTS = ['ashleigh-baking-school.herokuapp.com', 'localhost']
 
@@ -179,14 +181,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+
 if 'DEVELOPMENT' in os.environ:
     STATIC_URL = '/static/'
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
-    )
+else:
+    STATIC_URL = '/staticfiles/'
+    STATICFILES_DIRS = os.path.join(BASE_DIR, "static")
 
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
     # Cache control

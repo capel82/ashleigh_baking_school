@@ -2,20 +2,19 @@
 {% load static %}
 
 {% block content %}
-
-    <div class="container-fluid basket_container">
-        <div class="row">
+    <div class="container basket_container">
+        <hr>
+        <h2>Your Shopping Basket</h2>
+        <hr>
+        {% if basket_items %}
+        <p class="text-muted pt-2"> Please review items in your shopping basket.</p>
+        <p class="text-muted">You can update quantity of your items or remove item before checkout.</p>
+        <h4 class="mt-4 text-right"><strong>Grand Total: Euro {{ grand_total|floatformat:2 }}</strong></h4>
+       
+        <div class="row pt-3">
             <div class="col">
-
-                <h2 class="logo-font mb-4">Shopping Basket</h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                {% if basket_items %}
                     <div class="table-responsive">
-                        <table class="table table-sm table-borderless">
+                        <table class="table table-sm">
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
@@ -62,33 +61,33 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        </div>
+                                      
                                         <a class="update-link btn btn-outline-dark btn-sm"><small>Update</small></a>
-                                       
+                
                                     </td>
                                     <td class="py-3 ">
                                        € {{item.subtotal}}
-                                      <a href = "{% url 'remove' item.item_id %}" class="btn btn-danger btn-sm remove float-right ml-3" id="remove_{{ item.item_id }}"><small>Remove</small>
+                                      <a href = "{% url 'remove' item.item_id %}" class="btn btn-danger btn-sm remove float-right ml-3" id="remove_{{ item.item_id }}">Remove</a>
                                     </td>
                                 </tr>
+                    
                             {% endfor %}
                             <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h4 class="mt-4"><strong>Grand Total: Euro {{ grand_total|floatformat:2 }}</strong></h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'courses' %}" class="btn btn-outline-dark">
+                    
+
+                                <td colspan="4">
+                                
+                                    <a href="{% url 'courses' %}" class="btn btn-outline-dark float-left mt-4">
                                         <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Continue Browsing</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-dark">
+                                    <a href="{% url 'checkout' %}" class="btn btn-dark float-right mt-4">
                                         <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
+                                        <span>
+                                            <i class="fa fa-credit-card ml-2"></i>
+                                            <i class="fas fa-chevron-right ml-2"></i>
                                         </span>
                                     </a>
                                 </td>
@@ -96,13 +95,15 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead my-5">Your bag is empty.</p>
+                    <p class="lead my-5">Your shopping basket is currently has no item added.</p>
+                    
                     <a href="{% url 'courses' %}" class="btn btn-outline-dark">
                         <span>
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Continue Browsing</span>
                     </a>
+    
                 {% endif %}
             </div>
         </div>

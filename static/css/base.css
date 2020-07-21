@@ -216,11 +216,10 @@ div .card {
     background-attachment: fixed;
     -webkit-background-size:cover;
     -moz-background-size: cover;
-    min-height: 45vh;
+    min-height: 60vh;
     margin-top: 0;
     padding:0;
 }
-
 
 .list-group-item {
     font-weight: bold;

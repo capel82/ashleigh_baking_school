@@ -355,7 +355,7 @@ th {
     color: #fff;
 }
 .img_basket {
-    height:100%;
+    height:auto;
 }
 .update-link:hover {
     background-color: #91ACC0;

@@ -24,14 +24,14 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
-
+        )
+    print('EMAIL SENT')
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -117,7 +117,7 @@ class StripeWH_Handler:
                     original_bag=basket,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(basket).items():
+                for item_id, item_data in basket.item():
                     course = Course.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(

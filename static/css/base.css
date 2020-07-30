@@ -354,9 +354,7 @@ thead {
 th {
     color: #fff;
 }
-.img_basket {
-    height:auto;
-}
+
 .update-link:hover {
     background-color: #91ACC0;
     border: solid 1px #fff;

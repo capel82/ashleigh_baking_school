@@ -30,7 +30,14 @@ B. Owner of this baking school:
 
 ### B. Wireframes
 
-[wireframe](static/wireframes/wireframes1.png)
+[wireframe-desktop1](static/img/wireframes/Desktop1.png)
+[wireframe-desktop2](static/img/wireframes/Desktop2.png)
+[wireframe-desktop3](static/img/wireframes/Desktop3.png)
+[wireframe-desktop4](static/img/wireframes/Desktop4.png)
+[wireframe-desktop5](static/img/wireframes/Desktop5.png)
+[wireframe-mobile1](static/img/wireframes/mobile1.png)
+[wireframe-mobile2](static/img/wireframes/mobile2.png)
+[wireframe-mobile3](static/img/wireframes/mobile3.png)
 
 ### C. User Stories
 
@@ -59,27 +66,27 @@ Gift card page shows the image of gift card and general information about it suc
 This page shows the items that are added from browsing the courses or gift cards.  It include the image of the product, date and time as well as the price.  The grand total is clearly showed on the top right corner above the basket table.  In the basket table, user can update the quantity of similar item or remove item through update or remove button.
 At the bottom of the table, there is button for secure checkout or continue browsing to help to guide user what he or she can do next.
 
-**SECURE CHECKOUT**
+**Secure Checkout**
 
 This page are forms that required users to enter their information including their personal details, delivery address, personal message to be inserted in gift card and payment details at the bottom.  Users  either can complete the order by clicking on complete order or adjust basket if they change their mind.  Grand total is clearly showed above the payment as well as text in red about amount of payment will be charged to card is also shown just right below ‘complete button’.
 
-**SUCCESS CHECKOUT**
+**Success Checkout**
 
 A confirmation of success checkout if payment successful will be displayed along side with item information and order number.
 
-**OUR TEAM PAGE**
+**Our Team Page**
 
 This page is about chefs who run the baking school and general information on their baking qualification.
 
-**OUR KITCHEN PAGE**
+**Our Kitchen Page**
 
 This gives information about the location and how to reach the venue as well as a peek of the kitchen through the kitchen image.
 
-**CONTACT**
+**Contact**
 
 This page mainly gives information on ways to contact the baking school, either through email, post or phone.  Users can also fill in inquiry form for the baking school admin team to call or respond to them.
 
-**MY ACCOUNT**
+**My Account**
 
 User can register or login through the My Account on the top of the navbar.  Any fields that are not  filled in will be prompted to fill in or if password features not unique will prompt user to consider other passwords before submitting.  After logged in, user can update their addresses through the update button in My Account page and view any previous order history.  This website allows user to complete purchase without registering.
 
@@ -87,7 +94,7 @@ User can register or login through the My Account on the top of the navbar.  Any
 
 ###  D. FEATURES
 
-- **Top NavBar ** - This is non-collapsible Navbar features so that in the small screen, the name of the baking school, My account’s dropdown as well as Basket icon are still visible on the top.
+- **Top NavBar** - This is non-collapsible Navbar features so that in the small screen, the name of the baking school, My account’s dropdown as well as Basket icon are still visible on the top.
 
 - **Navbar** - This feature uses Bootstrap Navbar toggles and collapsible features which allow when in smaller screen to toggle and collapse, featuring  like a dropdown for easier navigation.
 
@@ -108,17 +115,17 @@ Right under that section is a section which uses bootstrap 4 grid system and car
 
 - **Individual product page** - Each of these pages showed details of the product.  All information are fetched from the database.  The quantity decreasing and increasing button utilising javascript features.
 
-- ** Shopping Basket ** - This uses bootstrap table features.  The increase and decreasing button is performed by javascript features.  Subtotal can be updated through the update button.  These all done through Django.
+- **Shopping Basket** - This uses bootstrap table features.  The increase and decreasing button is performed by javascript features.  Subtotal can be updated through the update button.  These all done through Django.
 
-- ** Secure Checkout ** - This page uses Django form features as well as crispy form feature for the appearance of the form.  Payment method is utilising Stripe payment installation.
+- **Secure Checkout** - This page uses Django form features as well as crispy form feature for the appearance of the form.  Payment method is utilising Stripe payment installation.
 
-- ** Our Team ** - The member displayed in the team section are all fetched from database.  If more members joining the school, this can be easily added through admin and display in the our team page.
+- **Our Team** - The member displayed in the team section are all fetched from database.  If more members joining the school, this can be easily added through admin and display in the our team page.
 
-- ** Contact Page **- The ‘Make An Inquiry’ is a button that if clicked on will bring on a modal.  This uses Bootstrap Modal features.  Form in the contact uses Django form feature as well as crispy form features.
+- **Contact Page**- The ‘Make An Inquiry’ is a button that if clicked on will bring on a modal.  This uses Bootstrap Modal features.  Form in the contact uses Django form feature as well as crispy form features.
 
-** Register /Login** - This uses Django All-auth library with some adjustment by CSS.  User details can also be saved into database if ‘save information’ is clicked.
+- **Register/Login** - This uses Django All-auth library with some adjustment by CSS.  User details can also be saved into database if ‘save information’ is clicked.
 
-- **_Features to implement in future_**
+**_Features to implement in future_**
 
 1.  To able to incorporate event calendar for ease of selecting courses according to months.
 2.  To create blogs that owner can provide information such as new recipes or event feedbacks.
@@ -126,11 +133,11 @@ Right under that section is a section which uses bootstrap 4 grid system and car
 
 ### E.Technologies Used
 
-[Adobe] (https://www.adobe.com/ie/products/xd.html?promoid=PYPVQ3HN&mv=other/)
+[Adobe](https://www.adobe.com/ie/products/xd.html?promoid=PYPVQ3HN&mv=other/)
 
 Why it is being used:  Recommended by my mentor and it gives a good idea of wireframes even to the details of colours and images.
 
-[Bootstrap v 4.4] (https://getbootstrap.com/)
+[Bootstrap v 4.4](https://getbootstrap.com/)
 
 Why it is being used: As mobile digitals are increasing and so widely used, Bootstraps has been chosen for mobile first -approach for the design of the webpages so that it can be easily made responsive with many different features offered.
 
@@ -188,13 +195,13 @@ _psycopg2-binary_
 
 ## DATABASES used:
 
-- [Postgres] in deployment
+_Postgres_ in deployment
 
-[SQlite] in development
+_SQlite_ in development
 
 ## VERSION CONTROL:
 
-- [Github] : remote repository used in this project and hosted in [Heroku]
+- _Github_ : remote repository used in this project and hosted in _Heroku_
 
 ### F. Testing
 
@@ -202,7 +209,7 @@ In the process of developing this project, Chrome Development Tool was used to a
 
 ##### **Manual testings:**
 
-[W3 HTML validator]
+[W3 HTML validator](https://validator.w3.org/)
 
 Deployed project tested on multiple devices including iphoneSE, iPhone 7, iPad and MacAir.  
 Chrome Development Tool used for desktop version.
@@ -213,13 +220,13 @@ Each features in the project has been tested in all these devices by making sing
 
 1. An IDE will be needed to run this project locally.
 
-2. In [Github] https://github.com/capel82/ashleigh_baking_school, choose the ashleigh_baking_school repository and on the right top corner, click on *code* green button to clone the codes. 
+2. In [Github](https://github.com/capel82/ashleigh_baking_school), choose the ashleigh_baking_school repository and on the right top corner, click on *code* green button to clone the codes. 
 
 3. Copied the URL  *https://github.com/capel82/ashleigh_baking_school.git* and at the IDE terminal type in `git clone https://github.com/capel82/ashleigh_baking_school.git` to clone into chosen working directory.
 
 4.  Create env.py to insert all secret keys required.
 
-`import OS
+```import OS
 
 os.environ[“SECRET_KEY”] = “Password”
 
@@ -229,7 +236,7 @@ os.environ[“STRIPE_SECRET_KEY”] = “Password”
 
 os.environ[“STRIPE_WH_SECRET” = “Password”
 
-os.environ[“DATABASE_URL”] =“Password”`
+os.environ[“DATABASE_URL”] =“Password”```
 
 5. import env.py in settings.py
 

@@ -92,6 +92,7 @@ This gives information about the location and how to reach the venue as well as 
 **FAQ**
 
 This gives general information for users about courses and if more information required, user can simply contact the baking school by clicking on button 'contact us' just below FAQ.
+
 **Contact**
 
 This page mainly gives information on ways to contact the baking school, either through email, post or phone.  Users can also fill in inquiry form for the baking school admin team to call or respond to them.
@@ -215,7 +216,7 @@ _SQlite_ in development
 
 ### F. Testing
 
-In the process of developing this project, Chrome Development Tool was used to assess responsiveness as well as designing and debugging.  HTML validator was used to validate the codes.
+In the process of developing this project, **Chrome Development Tool** was used to assess responsiveness as well as designing and debugging.  HTML validator was used to validate the codes.
 
 ##### **Manual testings:**
 
@@ -225,6 +226,8 @@ Deployed project tested on multiple devices including iphoneSE, iPhone 7, iPad a
 Chrome Development Tool used for desktop version.
 
 Each features in the project has been tested in all these devices by making single or multiple purchases of courses and gift cards and all successfully completed the checkout process and orders appear in admin area.  Inquiries submitted also appeared in contact in admin area.
+
+Login and Register features also tested. Admin area accessed by superuser account created.
 
  ###G. Local Deployment
 
@@ -381,7 +384,7 @@ os.environ[“DATABASE_URL”] =“Password”
 
 
 
-### J.Credits
+### H.Credits
 
 **Codes**
 

@@ -12,7 +12,6 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
-
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -70,7 +69,7 @@ def checkout(request):
                         order_line_item.save()
                 except Course.DoesNotExist:
                     messages.error(request, (
-                        "One of the items in your basket wasn't found in our database. "
+                        "One of the items in your basket wasn't found in our database."
                         "Please contact us!")
                     )
                     order.delete()
@@ -85,7 +84,7 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "Your basket is emptied at the moment.")
             return redirect(reverse('courses'))
 
         current_basket = basket_contents(request)
@@ -113,9 +112,7 @@ def checkout(request):
     return render(request, template, context)
 
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 

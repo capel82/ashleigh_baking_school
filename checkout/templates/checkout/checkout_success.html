@@ -45,7 +45,7 @@
                                 <td><strong>{{item.course.title}}<br>{{item.course.category}}<br>Euro {{item.course.price}}</strong>
                                 <br> {{item.course.course_datetime|date:"d F yy h:i a"}}</td>
                                 <td>{{item.quantity}}</td>
-                                <td>{{order.grand_total}}</td>
+                                <td>{{item.subtotal}}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

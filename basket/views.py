@@ -3,13 +3,11 @@ from django.contrib import messages
 
 from courses. models import Course
 
-
-# Create your views here.
 def view_basket(request):
     return render(request, 'basket/basket.html')
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+
     course = Course.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -27,7 +25,6 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 def update_basket(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})

@@ -31,12 +31,19 @@ B. Owner of this baking school:
 ### B. Wireframes
 
 [wireframe-desktop1](static/img/wireframes/Desktop1.png)
+
 [wireframe-desktop2](static/img/wireframes/Desktop2.png)
+
 [wireframe-desktop3](static/img/wireframes/Desktop3.png)
+
 [wireframe-desktop4](static/img/wireframes/Desktop4.png)
+
 [wireframe-desktop5](static/img/wireframes/Desktop5.png)
+
 [wireframe-mobile1](static/img/wireframes/mobile1.png)
+
 [wireframe-mobile2](static/img/wireframes/mobile2.png)
+
 [wireframe-mobile3](static/img/wireframes/mobile3.png)
 
 ### C. User Stories
@@ -82,6 +89,9 @@ This page is about chefs who run the baking school and general information on th
 
 This gives information about the location and how to reach the venue as well as a peek of the kitchen through the kitchen image.
 
+**FAQ**
+
+This gives general information for users about courses and if more information required, user can simply contact the baking school by clicking on button 'contact us' just below FAQ.
 **Contact**
 
 This page mainly gives information on ways to contact the baking school, either through email, post or phone.  Users can also fill in inquiry form for the baking school admin team to call or respond to them.
@@ -226,7 +236,7 @@ Each features in the project has been tested in all these devices by making sing
 
 4.  Create env.py to insert all secret keys required.
 
-```import OS
+import OS
 
 os.environ[“SECRET_KEY”] = “Password”
 
@@ -234,9 +244,9 @@ os.environ[“STRIPE_PUBLIC_KEY”] = “Password”
 
 os.environ[“STRIPE_SECRET_KEY”] = “Password”
 
-os.environ[“STRIPE_WH_SECRET” = “Password”
+os.environ[“STRIPE_WH_SECRET”] = “Password”
 
-os.environ[“DATABASE_URL”] =“Password”```
+os.environ[“DATABASE_URL”] =“Password”
 
 5. import env.py in settings.py
 
@@ -375,31 +385,31 @@ os.environ[“DATABASE_URL”] =“Password”```
 
 **Codes**
 
-Codes especially for basket and checkout page were taken from Boutique Ado Video Tutorial by Chris Z in Code Institute lessons. These also include signals, webhooks, stripe and email features taught by Chris Z.
+Codes for Basket and Checkout Apps were taken from Boutique Ado Video Tutorials by **Chris Z** in Code Institute lessons. These include signals, webhooks, stripe, email and forms features taught by Chris Z.
 
-Codes for pagination were taken from Brad Traversy tutorial on ‘Python Django Dev to Deployment’ in Udemy.
+Codes for pagination were taken from **Brad Traversy** tutorial on ‘Python Django Dev to Deployment’ in Udemy.
 
 **Images**
 
-1. Jumbotron images :
+1. Images :
 
-	a. ‘Churros with powdered sugar’ - by Pixabay at www.pexels.com
+	a. ‘Churros with powdered sugar’ - by Pixabay at [pexels](www.pexels.com)
 
-	b. ‘Baked bread platter on tabletop’ - by Lucie Liz at www.pexels.com
+	b. ‘Baked bread platter on tabletop’ - by Lucie Liz at [pexels](www.pexels.com)
 
-	c. ‘Berry closed up cooking’ by Mali Maeder at www.pexels.com
+	c. ‘Berry closed up cooking’ by Mali Maeder at [pexels](www.pexels.com)
 
-	d. ‘Men’s White Dress Shirt’ by Mentatdgt at www.pexels.com
+	d. ‘Men’s White Dress Shirt’ by Mentatdgt at [pexels](www.pexels.com)
 
-	e. ‘Brown haired girl in sleeveless dress at www.pexels.com
+	e. ‘Brown haired girl in sleeveless dress' at [pexels](www.pexels.com)
 
-	f. ‘contact’ at www.pexels.com
+	f. ‘contact’ at [pexels](www.pexels.com)
 
 2. Kitchen image: by Lisa R at www.biencuitglutenfree/residentialclass/cookery-kitchen-3/
 
-3. All courses images : [bbcgoodfood.com]
+3. All courses images : [bbcgoodfood.com]www.bbcgoodfood.com
 
-4. All gift cards images : www.amazon.com (giftcards)
+4. All gift cards images : [Amazon EU](www.amazon.com)(giftcards)
 
 
 ### I. Acknowledgement

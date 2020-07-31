@@ -229,7 +229,7 @@ Each features in the project has been tested in all these devices by making sing
 
 Login and Register features also tested. Admin area accessed by superuser account created.
 
- ###G. Local Deployment
+### G. Local Deployment
 
 1. An IDE will be needed to run this project locally.
 

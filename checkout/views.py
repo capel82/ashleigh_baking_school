@@ -12,6 +12,8 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
+
+#Codes taken from Boutique Ado by Christ Z
 @require_POST
 def cache_checkout_data(request):
     try:

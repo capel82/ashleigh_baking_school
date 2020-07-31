@@ -8,7 +8,7 @@ from courses.models import Course
 from profiles.models import UserProfile
 
 import time
-
+#Codes taken from Boutique Ado by Chris Z
 class StripeWH_Handler:
     """Handle Stripe webhooks- copied from Code Institute Stripe Part 10"""
 

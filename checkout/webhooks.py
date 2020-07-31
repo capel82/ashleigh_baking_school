@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
-
+#Codes taken from Boutique Ado by Chris Z
 @require_POST
 @csrf_exempt
 def webhook(request):
